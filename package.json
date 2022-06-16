@@ -12,5 +12,13 @@
     "express": "^4.18.1"
   },
   "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fquimbay05/grupo_1_Licores_la_Botellita.git"
+  },
+  "bugs": {
+    "url": "https://github.com/fquimbay05/grupo_1_Licores_la_Botellita/issues"
+  },
+  "homepage": "https://github.com/fquimbay05/grupo_1_Licores_la_Botellita#readme",
   "description": ""
 }
