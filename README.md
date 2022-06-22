@@ -16,7 +16,7 @@ Los productos que ofrecemos van dirigidos al público en general con restriccion
 ### Referentes del mercado:  
 - www.licoresbogota24.club - Estilo de la página 
 - www.licoresmedellin.com - Colores, iconos y referencias   
-- lalicorera.com  - Banner y estilo
+- https://lalicorera.com  - Banner y estilo
 - www.dislicores.com - Colores y detalles de diseño 
-- novili.com.co  - Formulario de registro
+- https://novili.com.co  - Formulario de registro
   
