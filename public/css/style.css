@@ -1,0 +1,257 @@
+* {
+    box-sizing: border-box;
+    /* background-color: rgba(234, 213, 213, 0.1); */
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    font-family: "Lato"sans-serif;
+}
+
+.contenedor_body {
+    width: 100%;
+    /* Ancho de la pantalla */
+    padding: 1%;
+    /* Tamaño de separacion en los costados */
+    margin: 2px;
+    /* Marge, separacion de dos elementos */
+    border: solid 1px black;
+    /* Borde del contenedor */
+    background-color: aqua;
+    /* Color de fondo del contenedor */
+    color: blue;
+    /* Color de texto dentro del contenedor */
+    margin: auto;
+    /* Ajuste dentro del tamaño de la pantalla */
+
+}
+
+/* No se muestra el objeto porque tiene la propiedad display None */
+.Cotizacion {
+    display: none;
+    width: 20%;
+    padding-right: 100%;
+    padding-left:  15%;
+    margin-right: 2px;
+    border: solid 1px black;
+    background-color: #868686;
+    color: white;
+    
+}
+.Ingresar{
+    display: none;
+    width: 20%;
+    padding-right: 100%;
+    padding-left:  40%;
+    margin-right: 2px;
+    border: solid 1px black;
+    background-color: #868686;
+    color: white;
+    
+}
+
+@media (max-width: 390px) {
+    .contenedor_body {
+        width: 90%;
+        background-color: purple;
+        color: rgb(20, 2, 106);
+    }
+}
+
+@media (min-width: 920px) {
+    .contenedor_body {
+        width: 80%;
+        background-color: rgb(128, 0, 0);
+        color: rgb(0, 0, 0);
+    }
+
+    /* Se muestra el oculto cuando se cumple la condicion <920Px  */
+
+    .Cotizacion {
+        display: block;
+    }
+    .Ingresar {
+        display: block;
+    }
+}
+
+
+.cont_header {
+    width: 100%;
+    padding: 1%;
+    border: solid 1px rgb(0, 0, 0);
+    background-color: rgb(255, 98, 0);
+    margin: auto;
+}
+
+  nav{
+    background: #7F1832;
+    height: 80px;
+    width: 100%;
+}
+.enlace{
+    position: absolute;
+    padding: 20px 50px;
+}
+.logo{
+    height: 80px;
+    float: right;
+}
+nav ul{
+    float: left;
+    margin-left: 10px;
+}
+
+/* Alineación de las etiquetas */
+nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+}
+
+/* Dieseño del tipo de letra de la barra */
+nav ul li a{
+    color: #FFFFFF;
+    font-size: 25px;
+    padding: 7px 13px;
+    border-radius: 3px;
+    text-transform: uppercase;
+}
+/* Efecto y color cuando se pasa el cursor sobre el texto */
+li a.active, li a:hover{
+    background: #000090;
+    transition: .5s;
+}
+
+/*Menú hamburguesa*/
+.checkbtn{
+    font-size: 30px;
+    color: #fff;
+    float: left;
+    line-height: 80px;
+    margin-left: 40px;
+    cursor: pointer;
+    display: none;
+}
+#check{
+    display: none;
+}
+section{
+    background: url(fondo.jpg) no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: calc(100vh - 80px);
+}
+
+@media (max-width: 952px){
+    .enlace{
+        padding-left: 20px;
+    }
+    nav ul li a{
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 858px){
+    .checkbtn{
+        display: block;
+    }
+    ul{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #2c3e50;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+    }
+    nav ul li{
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+    nav ul li a{
+        font-size: 20px;
+    }
+    li a:hover, li a.active{
+        background: none;
+        color: red;
+    }
+    #check:checked ~ ul{
+        left:0;
+    }
+}
+
+
+
+
+
+
+.cont_main {
+    width: 100vw;
+    padding: 1%;
+    border: solid 1px rgb(0, 0, 0);
+    background-color: rgb(44, 49, 39);
+    margin: auto;
+    color: #FFFFFF;
+
+}
+
+.cont_footer {
+    width: 100vw;
+    padding: 1%;
+    border: solid 1px rgb(0, 0, 0);
+    background-color: rgb(218, 19, 184);
+    margin: auto;
+
+
+}
+
+
+#redes {
+    width: auto;
+    height: 30%;
+    background-color: rgb(36, 97, 203);
+    float: center;
+    display: block;
+
+}
+
+.RedesSociales {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+/* Agrupacion de los iconos de redes sociales */
+.RedesSociales li {
+    align-items: center;
+    margin: 0 7%;
+}
+
+/* Color de los iconos */
+.RedesSociales a {
+    color: rgb(13, 13, 12);
+}
+
+.RedesSociales a i {
+    font-size: 25px;
+    transition: color .4s;
+}
+
+/* Efecto y color cuando se pasa el cursor sobre los iconos */
+.RedesSociales a:hover i {
+    color: #ffffff;
+}
+
+h6 {
+    color: white;
+    background-color: black;
+    text-align: center;
+}
