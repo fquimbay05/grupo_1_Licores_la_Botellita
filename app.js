@@ -5,7 +5,7 @@ app.use(express.static('public'))
 app.use(express.static('views'))
 
 
-app.listen(3040, () => {console.log("Servidor ejecutando en localhost:3040")});
+app.listen(3000, () => {console.log("Servidor ejecutando en localhost:3000")});
 
 app.get("/", (req, res) => {
     let index= path.resolve('./views/index.html');
@@ -31,7 +31,6 @@ app.get('/club', (req, res) =>{
   let clu= path.resolve('./views/club.html'); 
   res.sendFile(clu);
 })
-
 /* app get para Ofertas */
 app.get('/ofertas', (req, res) =>{
   let offer= path.resolve('./views/ofertas.html'); 

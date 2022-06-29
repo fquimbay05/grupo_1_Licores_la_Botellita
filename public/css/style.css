@@ -5,17 +5,21 @@
 	margin: 0;
 	box-sizing: border-box;
 }
+
 html {
 	font-size: 10px;
 	font-family: 'Montserrat', sans-serif;
 	scroll-behavior: smooth;
 }
+
 a {
 	text-decoration: none;
 }
+
 img {
 	border-radius: 50%;
-  }
+}
+
 /*Contenerdor Banner*/
 .container {
 	min-height: 50vh;
@@ -24,12 +28,14 @@ img {
 	align-items: center;
 	justify-content: center;
 }
+
 img {
 	height: 100%;
 	width: 100%;
 	object-fit: cover;
 
 }
+
 /*Estilo del parrafo del centro de la pagina */
 /*Interlineado de los productos*/
 p {
@@ -59,6 +65,7 @@ p {
 	border: 2px solid crimson;
 	margin-top: 1px;
 }
+
 /*animacion cuando se pasa el cursor por las cajas*/
 
 .caja:hover {
@@ -72,6 +79,7 @@ p {
 	text-transform: uppercase;
 	color: rgb(137, 136, 187);
 }
+
 /*Color del textos de las inciales de encabezado y pie de pagina*/
 .brand h1 span {
 	color: rgb(255, 255, 255);
@@ -87,12 +95,14 @@ p {
 	width: 100vw;
 	height: auto;
 }
+
 /*Color de la barra superor*/
 
 #header .header {
 	min-height: 8vh;
 	background-color: #7F1832;
 }
+
 /*Estilo de la barra superor*/
 #header .nav-bar {
 	display: flex;
@@ -103,6 +113,7 @@ p {
 	max-width: 1300px;
 	padding: 0 10px;
 }
+
 /*Menú Hambueguesa */
 
 #header .nav-list ul {
@@ -121,6 +132,7 @@ p {
 	overflow-x: hidden;
 	transition: 0.5s ease left;
 }
+
 #header .nav-list ul.active {
 	left: 0%;
 }
@@ -133,8 +145,9 @@ p {
 	padding: 10px;
 	display: block;
 }
+
 /*Menu hamburguesa en <170 px*/
- #header .nav-list ul a::after {
+#header .nav-list ul a::after {
 	content: attr(data-after);
 	position: absolute;
 	top: 50%;
@@ -145,15 +158,18 @@ p {
 	letter-spacing: 50px;
 	z-index: -1;
 	transition: 0.3s ease letter-spacing;
-} 
- #header .nav-list ul li:hover a::after {
+}
+
+#header .nav-list ul li:hover a::after {
 	transform: translate(-50%, -50%) scale(1);
 	letter-spacing: initial;
-} 
+}
+
 /*Cambia de color cuando se da clic en el menú en modo celular*/
 #header .nav-list ul li:hover a {
 	color: rgb(21, 1, 202);
-} 
+}
+
 #header .hamburger {
 	height: 60px;
 	width: 60px;
@@ -169,6 +185,7 @@ p {
 	transform: scale(0.8);
 	margin-right: 20px;
 }
+
 #header .hamburger:after {
 	position: absolute;
 	content: '';
@@ -178,6 +195,7 @@ p {
 	border: 3px solid white;
 	animation: hamburger_puls 1s ease infinite;
 }
+
 #header .hamburger .bar {
 	height: 2px;
 	width: 30px;
@@ -185,6 +203,7 @@ p {
 	background-color: white;
 	z-index: -1;
 }
+
 #header .hamburger .bar::after,
 #header .hamburger .bar::before {
 	content: '';
@@ -196,27 +215,57 @@ p {
 	transition: 0.3s ease;
 	transition-property: top, bottom;
 }
+
 #header .hamburger .bar::after {
 	top: 8px;
 }
+
 #header .hamburger .bar::before {
 	bottom: 8px;
 }
+
 #header .hamburger.active .bar::before {
 	bottom: 0;
 }
+
 #header .hamburger.active .bar::after {
 	top: 0;
 }
+
 /* End Header section */
+
+header .form .submit {
+	background-color: #FFF;
+	border: 1px solid #000;
+	color: #FFF;
+	width: 20%;
+}
+
+header .form .input {
+	background-color: #FFF;
+	border: 1px solid #000;
+	outline: none;
+	color: #666;
+	padding: 2px;
+}
+
+div.carrito-compras {
+	display: flex;
+	text-align: right;
+}
+
+.blackiconcolor {
+	color: white;
+}
 
 /* Section Color del body*/
 #init {
 
 	background-color: rgb(48, 216, 225);
-	position:relative;
+	position: relative;
 	width: 100%;
 }
+
 /* Efecto degradado del color de body */
 #init::after {
 	content: '';
@@ -227,6 +276,7 @@ p {
 	background-color: rgb(181, 160, 160);
 	opacity: 0.5;
 }
+
 /* End init Section */
 
 /* Services Section */
@@ -236,34 +286,38 @@ p {
 	text-align: center;
 	max-width: 600px;
 }
+
 /* Decripción del texto principal del centro */
 
 #services .service-top {
 	max-width: 900px;
 }
+
 /* Diseño de las cajas grandes del centro de la pagina */
 
 #services .service-bottom {
-	display:flex;
-	align-items:stretch;
-	justify-content:space-around;
-	flex-wrap:wrap;
+	display: flex;
+	align-items: stretch;
+	justify-content: space-around;
+	flex-wrap: wrap;
 	margin-top: 1px;
 	margin-bottom: 1px;
 }
+
 /* Estilo de las cajas del centro de la pagina */
 
 #services .service-item {
-	display:flex;
-	align-items:center;
-	justify-content:space-around;
-	flex-direction:column;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	flex-direction: column;
 	padding: 30px;
 	border-radius: 180px;
 	position: relative;
 	z-index: 1;
 	overflow: hidden;
 }
+
 /* Estilo de las cajas del centro de la pagina */
 #services .service-item::after {
 	content: '';
@@ -274,13 +328,15 @@ p {
 	opacity: 0.9;
 	z-index: -1;
 }
+
 /* Estilo de las imagenes pequeñas del centro de la pagina */
 #services .service-bottom .icon {
 	height: 80px;
 	width: 80px;
 	margin-bottom: 5%;
-	
+
 }
+
 /* Color del titulo del texto de la caja de centro */
 #services .service-item h2 {
 	font-size: 22px;
@@ -288,6 +344,7 @@ p {
 	margin-bottom: 20px;
 	text-transform: uppercase;
 }
+
 /* Color del texto de la caja de centro */
 #services .service-item p {
 	color: rgb(243, 249, 250);
@@ -300,15 +357,17 @@ p {
 	padding: 0.2vw;
 	margin: 0.3vw;
 }
+
 /* End Services Section */
 
 /* Projects section, contenido de proyectos recientes*/
 #projects .projects {
-	flex-direction:column;
+	flex-direction: column;
 	max-width: 1200px;
 	margin: 0 auto;
 	padding: 20px 0;
 }
+
 /*Margen entre el titulo y las imagenes*/
 #projects .projects-header h4 {
 	margin-bottom: 28px;
@@ -316,10 +375,11 @@ p {
 
 /*Imagen del centro*/
 #projects .project-img {
-	overflow:hidden;
-	position:relative;
+	overflow: hidden;
+	position: relative;
 	background-color: #ff0505df;
 }
+
 /*Colores de degradación sobre la imagen*/
 #projects .project-img:after {
 	content: '';
@@ -331,12 +391,15 @@ p {
 	background-image: linear-gradient(70deg, #1777df 90%, #6ef4c1 100%);
 	opacity: 0.4;
 }
+
 #projects .project-img img {
 	transition: 0.8s ease transform;
 }
+
 #projects .project-item:hover .project-img img {
 	transform: scale(1.1);
 }
+
 /* End Projects section */
 
 
@@ -344,14 +407,16 @@ p {
 #footer {
 	background-image: linear-gradient(60deg, #7f1832 10%, #485563 80%);
 }
+
 /*Diseño de footer*/
 #footer .footer {
 	min-height: 100px;
-	flex-direction:column;
+	flex-direction: column;
 	padding-top: 1%;
 	padding-bottom: 1%;
 
 }
+
 /*Color de texto de footer*/
 #footer h2 {
 	color: white;
@@ -361,18 +426,20 @@ p {
 	margin-top: 20px;
 	margin-bottom: 10px;
 }
+
 /*Iconos de redes sociales*/
 #footer .social-icon {
 	display: flex;
 	margin-bottom: 5px;
 	;
 }
+
 /*Tamaño y distacia entre los botones*/
 #footer .social-item {
 	height: 50px;
 	width: 50px;
 	margin: 0 10px;
-	margin-bottom: 2%;	
+	margin-bottom: 2%;
 }
 
 /*Derechos de autor*/
@@ -380,6 +447,7 @@ p {
 	color: white;
 	font-size: 1.3rem;
 }
+
 /* End Footer */
 /* Media Query For Tablet */
 @media only screen and (min-width: 768px) {
@@ -387,6 +455,7 @@ p {
 		font-size: 2.5rem;
 		padding: 20px 60px;
 	}
+
 	h1.section-title {
 		font-size: 6rem;
 	}
@@ -395,6 +464,7 @@ p {
 	#init h1 {
 		font-size: 7rem;
 	}
+
 	/* End init */
 
 	/* Services Section */
@@ -402,59 +472,72 @@ p {
 		flex-basis: 45%;
 		margin: 2.5%;
 	}
+
 	/* End Services Section */
 
 	/* Project */
 	#projects .project-item {
 		flex-direction: row;
 	}
+
 	#projects .project-item:nth-child(even) {
 		flex-direction: row-reverse;
 	}
+
 	#projects .project-item {
 		height: 400px;
 		margin: 0;
 		width: 100%;
 		border-radius: 0;
 	}
+
 	#projects .all-projects .project-info {
 		height: 100%;
 	}
+
 	#projects .all-projects .project-img {
 		height: 100%;
 	}
+
 	/* End Project */
 
-/* End Media Query For Tablet */
+	/* End Media Query For Tablet */
 
-/* Media Query For Desktop */
-@media only screen and (min-width: 1200px) {
-	/* header */
-	#header .hamburger {
-		display: none;
-	}
-	#header .nav-list ul {
-		position: initial;
-		display: block;
-		height: auto;
-		width: fit-content;
-		background-color: transparent;
-	}
-	#header .nav-list ul li {
-		display: inline-block;
-	}
-	#header .nav-list ul li a {
-		font-size: 1.8rem;
-	}
-	#header .nav-list ul a:after {
-		display: none;
-	}
-	/* End header */
+	/* Media Query For Desktop */
+	@media only screen and (min-width: 1200px) {
 
-	#services .service-bottom .service-item {
-		flex-basis: 22%;
-		margin: 1.5%;
+		/* header */
+		#header .hamburger {
+			display: none;
+		}
+
+		#header .nav-list ul {
+			position: initial;
+			display: block;
+			height: auto;
+			width: fit-content;
+			background-color: transparent;
+		}
+
+		#header .nav-list ul li {
+			display: inline-block;
+		}
+
+		#header .nav-list ul li a {
+			font-size: 1.8rem;
+		}
+
+		#header .nav-list ul a:after {
+			display: none;
+		}
+
+		/* End header */
+
+		#services .service-bottom .service-item {
+			flex-basis: 22%;
+			margin: 1.5%;
+		}
 	}
 }
-}
+
 /* End  Media Query For Desktop */
