@@ -429,6 +429,7 @@ p {
 
 /* Media Query For Desktop */
 @media only screen and (min-width: 1200px) {
+	/*@media only screen and (max-width:1600px) and (min-width: 1200px)*/
 	/* header */
 	#header .hamburger {
 		display: none;
@@ -458,3 +459,8 @@ p {
 }
 }
 /* End  Media Query For Desktop */
+
+
+.badge-light{
+
+}

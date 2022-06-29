@@ -10,9 +10,7 @@ app.listen(3040, () => {console.log("Servidor ejecutando en localhost:3040")});
 app.get("/", (req, res) => {
     let index= path.resolve('./views/index.html');
     res.sendFile(index);
-  })
-
-  
+  })  
 
 /* app get producto */
 app.get('/productos', (req, res) =>{
