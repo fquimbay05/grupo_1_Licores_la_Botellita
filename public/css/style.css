@@ -503,10 +503,6 @@ div.carrito-compras {
 
 	/* End Media Query For Tablet */
 
-<<<<<<< HEAD
-	/* Media Query For Desktop */
-	@media only screen and (min-width: 1200px) {
-=======
 /* Media Query For Desktop */
 @media only screen and (min-width: 1200px) {
 	/*@media only screen and (max-width:1600px) and (min-width: 1200px)*/
@@ -531,7 +527,6 @@ div.carrito-compras {
 		display: none;
 	}
 	/* End header */
->>>>>>> 6d9c32232b9ba5f7d94537e78b12c3146ed04540
 
 		/* header */
 		#header .hamburger {
