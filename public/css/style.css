@@ -62,15 +62,17 @@ p {
 .caja {
 	display: inline-block;
 	color: white;
-	border: 2px solid crimson;
-	margin-top: 1px;
+   /*	border: 2px solid crimson;*/
+	margin-top: 3px;
+	
 }
 
 /*animacion cuando se pasa el cursor por las cajas*/
 
 .caja:hover {
-	color: rgb(228, 7, 7);
-	background-color: rgb(120, 187, 184);
+	color: white(228, 7, 7);
+	background-color: rgb(99, 103, 103);
+
 }
 
 /*Color del textos del encabezado y pie de pagina*/
@@ -353,7 +355,7 @@ div.carrito-compras {
 
 #services .service-item .caja {
 	width: 8vw;
-	border: solid 2px red;
+	border: solid 2px #7F1832(0, 255, 98);
 	padding: 0.2vw;
 	margin: 0.3vw;
 }
@@ -379,6 +381,22 @@ div.carrito-compras {
 	position: relative;
 	background-color: #ff0505df;
 }
+/*Imagen vino*/
+.product_img{
+  width: 30%;
+  height: 10%;
+  padding-right: 20%;
+
+}
+.products{
+	display: flex;
+	flex-direction: row; 
+	flex-wrap: wrap; 
+	/* justify-content: space-between; */
+	align-items: flex-start;
+	padding-top: 60px; 
+	padding-left: 20px;
+} 
 
 /*Colores de degradación sobre la imagen*/
 #projects .project-img:after {
