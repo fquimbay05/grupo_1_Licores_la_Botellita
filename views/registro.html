@@ -14,8 +14,12 @@
                 xhttp = new XMLHttpRequest();
                 xhttp.onreadystatechange = function () {
                     if (this.readyState == 4) {
-                        if (this.status == 200) { elmnt.innerHTML = this.responseText; }
-                        if (this.status == 404) { elmnt.innerHTML = "Page not found."; }
+                        if (this.status == 200) {
+                            elmnt.innerHTML = this.responseText;
+                        }
+                        if (this.status == 404) {
+                            elmnt.innerHTML = "Page not found.";
+                        }
                         /*remove the attribute, and call this function once more:*/
                         elmnt.removeAttribute("include-html");
                         includeHTML();
@@ -36,17 +40,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/vendors/font-awesome.min.css">
     <link rel="stylesheet" href="/css/style1.css">
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <title>Productos</title>
 
 </head>
 
-<body>
-    <div include-html="header.html"></div>
-    
-    <p>
-        Pagina de productos
+<div include-html="header.html"></div>
 
-    </p>
+<body>
+    <div class="login">
+    <form action="#" method=post>
+        <label for="usuario">
+            <h3>Nombre Usuario</h3>
+        </label>
+        <input type="text" name="usuario" maxlength="50"><br><br>
+
+        <label for="password">
+            <h3>Password</h3>
+        </label>
+        <input type="password" name="password" maxlength="80"><br><br>
+
+        <input type="submit" value="Ingresar">
+        <input type="reset" value="Borrar">
+        <!-- <div class="g-recaptcha" data-sitekey="6Lc2GskgAAAAALFLac9Tytnjn-FCXPyxD48lbiHi"></div> -->
+    </form>
+</div>
+
 
     <div include-html="footer.html"></div>
     <script>

@@ -46,3 +46,9 @@ app.get('/login', (req, res) =>{
   let login_user= path.resolve('./views/login.html'); 
   res.sendFile(login_user);
 })
+
+/* app get para login */
+app.get('/registro', (req, res) =>{
+  let registre= path.resolve('./views/registro.html'); 
+  res.sendFile(registre);
+})
