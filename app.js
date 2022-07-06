@@ -40,3 +40,9 @@ app.get('/servicios', (req, res) =>{
   let service= path.resolve('./views/servicios.html'); 
   res.sendFile(service);
 })
+
+/* app get para login */
+app.get('/login', (req, res) =>{
+  let login_user= path.resolve('./views/login.html'); 
+  res.sendFile(login_user);
+})
