@@ -14,8 +14,12 @@
                 xhttp = new XMLHttpRequest();
                 xhttp.onreadystatechange = function () {
                     if (this.readyState == 4) {
-                        if (this.status == 200) { elmnt.innerHTML = this.responseText; }
-                        if (this.status == 404) { elmnt.innerHTML = "Page not found."; }
+                        if (this.status == 200) {
+                            elmnt.innerHTML = this.responseText;
+                        }
+                        if (this.status == 404) {
+                            elmnt.innerHTML = "Page not found.";
+                        }
                         /*remove the attribute, and call this function once more:*/
                         elmnt.removeAttribute("include-html");
                         includeHTML();
@@ -36,17 +40,89 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/vendors/font-awesome.min.css">
     <link rel="stylesheet" href="/css/style1.css">
-    <title>Productos</title>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <meta name="google-signin-client_id" content="1003853917135-db4s85m58gm7ghasa73rvsaf5kbt6kib.apps.googleusercontent.com">
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <title>Registro</title>
 
 </head>
 
-<body>
-    <div include-html="header.html"></div>
-    
-    <p>
-        Pagina de productos
+<div include-html="header.html"></div>
 
-    </p>
+<body>
+    <div class="login">
+        <form action="#" method=post>
+
+            <section id="services">
+
+                <div class="service-bottom">
+                    <!-- <div class="service-item"> -->
+                    <div class="icon"><img src="./img/vinos/icono_vino.jpg" /></div>
+            </section>
+
+
+            <h1>Login</h1><br><br><br>
+
+            <input type="text" name="usuario" maxlength="15"><br>
+            <label for="usuario">
+                <h3>Nombre Usuario</h3>
+            </label><br>
+
+            <input type="password" name="password" maxlength="20"><br>
+            <label for="password">
+                <h3>Password</h3>
+            </label><br>
+
+            <input type="submit" value="Login" class="captcha"><br><br>
+            <div class="g-recaptcha" data-sitekey="6Lc2GskgAAAAALFLac9Tytnjn-FCXPyxD48lbiHi"></div><br><br>
+
+
+    <!-- Autenticacion con google -->
+
+    <div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div>
+    <script>
+      function onSignIn(googleUser) {
+        var profile = googleUser.getBasicProfile();
+        console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
+        console.log('Name: ' + profile.getName());
+        console.log('Image URL: ' + profile.getImageUrl());
+        console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
+      }
+    </script>
+        </form>
+    </div>
+<!-- End autenticacion con Google -->
+
+<!-- Inicio de sesion con Facebook -->
+
+
+<script>
+    window.fbAsyncInit = function() {
+      FB.init({
+        appId      : '{your-app-id}',
+        cookie     : true,
+        xfbml      : true,
+        version    : '{api-version}'
+      });
+        
+      FB.AppEvents.logPageView();   
+        
+    };
+  
+    (function(d, s, id){
+       var js, fjs = d.getElementsByTagName(s)[0];
+       if (d.getElementById(id)) {return;}
+       js = d.createElement(s); js.id = id;
+       js.src = "https://connect.facebook.net/en_US/sdk.js";
+       fjs.parentNode.insertBefore(js, fjs);
+     }(document, 'script', 'facebook-jssdk'));
+  </script>
+
+
+<!-- End inicio de sesion con Facebook -->
+
+
+
 
     <div include-html="footer.html"></div>
     <script>

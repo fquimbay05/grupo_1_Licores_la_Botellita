@@ -118,7 +118,7 @@ article div.main-article{
 #header .nav-bar {
 	display: flex;
 	align-items: center;
-	justify-content: space-between;
+	justify-content:space-between;
 	width: 100%;
 	height: 100%;
 	max-width: 1300px;
@@ -252,7 +252,7 @@ div.offers{
 	background-color: rgb(186, 211, 178);
 	border: 3px solid rgb(234, 151, 151);
 	width: 30%;
-	height: 300px;
+	height: 100%;
 	padding: 50px;
 	color: #000;
 	position:relative;
