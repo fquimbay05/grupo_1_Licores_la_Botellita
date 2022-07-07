@@ -260,7 +260,16 @@ div.offers{
 	margin: 0 auto;
 }
 
-
+/* .fa-cart-circle-plus {
+    color: salmon;
+    background-color: rgb(230, 173, 82);
+    border-radius: 0.2em;
+    padding: 0.3em;
+  }
+  
+.fa-cart-circle-plus:hover {
+    color: green;
+  } */ */
 
 
 /* End Header section */
@@ -355,7 +364,7 @@ div.carrito-compras {
 	position: absolute;
 	height: 100%;
 	width: 100%;
-	background-image: linear-gradient(60deg, #000000cc 0%, #6799cb 100%);
+	background-image: linear-gradient(60deg, #000000cc 0%, #cfd3d6 100%); 
 	opacity: 0.9;
 	z-index: -1;
 }
@@ -371,7 +380,7 @@ div.carrito-compras {
 /* Color del titulo del texto de la caja de centro */
 #services .service-item h2 {
 	font-size: 22px;
-	color: white;
+	color: white(219, 68, 68);
 	margin-bottom: 20px;
 	text-transform: uppercase;
 }
@@ -411,24 +420,91 @@ div.carrito-compras {
 	background-color: #ff0505df;
 }
 /*Imagen vino*/
-.product_img{
-  width: 30%;
-  height: 10%;
-  padding-right: 10%;
 
+div.last-visit,
+div.offers{
+    display: flex;
+    flex-wrap: wrap;
 }
-div.products{
-	display: flex;
-	flex-direction: row; 
-	flex-wrap: wrap; 
-	/* justify-content: space-between;  */
-	align-items: flex-start;
-	padding-top: 60px; 
-	padding-left: 20px;
-} 
+
+.price{
+    font-size: 18px;
+    width: 30%;
+}
+
+.discount{
+    width: 70%;
+}
+
+.discount,
+.description{
+    font-size: 12px;
+    font-weight: normal;
+}
+
+h3,
+.description{
+    color: #666;
+}
+
+.description{
+    display: none;
+    margin-top: 20px;
+}
+
+section.banner img{
+    width: 100%;
+}
+/*van todos las clase de productos*/
+.main{
+	margin-top: 50px;
+}
+
+main{
+    width: 90%;
+    margin: 0 auto;
+}
+
 main section article{
-    background-color: rgb(186, 61, 61);    
+    background-color: #fff;    
     margin: 10px 0px;
+}
+
+main section article img{
+    width: 100%;
+}
+
+main section article i,
+.discount{
+    color: #7F1832;
+}
+
+main section article i{
+    display: block;
+    font-size: 16px;
+    padding: 5px;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #7F1832;
+    background-color: #FFF;
+    border-radius: 50%;
+    position: absolute;
+    right: 20px;
+    top: -15px;
+}
+
+main section h3{
+    margin: 20px 0px;
+}
+
+article div.main-article{
+    width: 100%;
+     display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    border-top: 1px solid #ebebeb;
+    position: relative;
+    padding: 15px; 
 }
 
 /*Colores de degradación sobre la imagen*/
@@ -619,4 +695,37 @@ main section article{
 			margin: 1.5%;
 		}
 	}
+}
+@media (min-width: 361px){
+    main section article .description{
+        display: block;
+    }
+
+    main section article{
+        box-shadow: 0px 0px 10px rgb(234, 151, 151);
+		border-radius: 15px;
+    }
+
+     main section div.products{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: flex-start;
+    } 
+    
+    main section div.products article{
+        width: 45%;
+    }
+
+    .price,
+    .discount{
+        width: 50%;
+    }
+}
+
+@media (min-width: 769px){
+    main section div.products article{
+        width: 22%;
+    }
 }

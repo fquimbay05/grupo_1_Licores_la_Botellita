@@ -2,189 +2,171 @@
 <html lang="es-Co">
   <script>
     function includeHTML() {
-        var z, i, elmnt, file, xhttp;
-        /*loop through a collection of all HTML elements:*/
-        z = document.getElementsByTagName("*");
-        for (i = 0; i < z.length; i++) {
-            elmnt = z[i];
-            /*search for elements with a certain atrribute:*/
-            file = elmnt.getAttribute("include-html");
-            if (file) {
-                /*make an HTTP request using the attribute value as the file name:*/
-                xhttp = new XMLHttpRequest();
-                xhttp.onreadystatechange = function () {
-                    if (this.readyState == 4) {
-                        if (this.status == 200) { elmnt.innerHTML = this.responseText; }
-                        if (this.status == 404) { elmnt.innerHTML = "Page not found."; }
-                        /*remove the attribute, and call this function once more:*/
-                        elmnt.removeAttribute("include-html");
-                        includeHTML();
-                    }
-                }
-                xhttp.open("GET", file, true);
-                xhttp.send();
-                /*exit the function:*/
-                return;
+      var z, i, elmnt, file, xhttp;
+      /*loop through a collection of all HTML elements:*/
+      z = document.getElementsByTagName("*");
+      for (i = 0; i < z.length; i++) {
+        elmnt = z[i];
+        /*search for elements with a certain atrribute:*/
+        file = elmnt.getAttribute("include-html");
+        if (file) {
+          /*make an HTTP request using the attribute value as the file name:*/
+          xhttp = new XMLHttpRequest();
+          xhttp.onreadystatechange = function () {
+            if (this.readyState == 4) {
+              if (this.status == 200) {
+                elmnt.innerHTML = this.responseText;
+              }
+              if (this.status == 404) {
+                elmnt.innerHTML = "Page not found.";
+              }
+              /*remove the attribute, and call this function once more:*/
+              elmnt.removeAttribute("include-html");
+              includeHTML();
             }
+          };
+          xhttp.open("GET", file, true);
+          xhttp.send();
+          /*exit the function:*/
+          return;
         }
+      }
     }
-</script>
-<head>
+  </script>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dev Licores la Botellita</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
+    <script
+      src="https://kit.fontawesome.com/6822eedb87.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link
+      rel="stylesheet"
+      href="/css/footer-distributed-with-address-and-phones.css"
+    />
+  </head>
 
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dev Licores la Botellita</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
-  <script src="https://kit.fontawesome.com/6822eedb87.js" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="/css/style.css">
-  <link rel="stylesheet" href="/css/footer-distributed-with-address-and-phones.css">
-
-</head>
-
-<body>
-
-  <!-- <header> -->
-<div include-html="header.html"></div>
-  <!-- End Header-->
-  <!-- init Section -->
-  <section id="init">
-    <div class="init container">
-
-      <marquee direction="left" width="100%" height="400" behavior="alternate" style="border:transparent">
-        <img src="./img/coctel/coctel_5.jpg" alt="banner">
-      </marquee>
-    </div>
-  </section>
-  <!-- End init Section  -->
-
-  <!-- Service Section -->
-  <section id="services">
-
-    <div class="service-bottom">
-      <div class="service-item">
-        <div class="icon"><img src="./img/vinos/icono_vino.jpg" /></div>
-        <h2>Vinos</h2>
-        <!-- <p class="price">Precio</p>
-        <p>Descripción de Productos</p>
-        <p>Tamaño de la botella</p>
-        <div>
-          <a class="caja" href="#compras" type="button" >Comprar</a>
-        </div> -->
+  <body>
+    <!-- <header> -->
+    <div include-html="header.html"></div>
+    <!-- End Header-->
+    <!-- init Section -->
+    <section id="init">
+      <div class="init container">
+        <marquee
+          direction="left"
+          width="100%"
+          height="400"
+          behavior="alternate"
+          style="border: transparent"
+        >
+          <img src="./img/banner.png" alt="banner" />
+        </marquee>
       </div>
-      <div class="service-item">
-        <div class="icon"><img src="./img/whisky/whisky.png" /></div>
-        <h2>Whisky</h2>
-        <p class="price">Precio</p>
-        <p>Descripción de Productos</p>
-        <p>Tamaño de la botella</p>
-        <div>
-          <a href="#compras" type="button" class="caja">Comprar</a>
-        </div>
-      </div>
-      <div class="service-item">
-        <div class="icon"><img src="./img/tequila/tequila.jpg" /></div>
-        <h2>Tequila</h2>
-        <p class="price">Precio</p>
-        <p>Descripción de Productos</p>
-        <p>Tamaño de la botella</p>
-        <div>
-          <a href="#compras" type="button" class="caja">Comprar</a>
-        </div>
-      </div>
-      <div class="service-item">
+    </section>
+    <!-- End init Section  -->
+
+    <!-- Service Section -->
+      <section id="services">
+        <div class="service-bottom">
+          <div class="service-item">
+            <div class="icon">
+              <img src="./img/vinos/vinotintocastillo.png" />
+            </div>
+            <h2>Vinos</h2>
+          </div>
+          <div class="service-item">
+            <div class="icon">
+              <img src="./img/whisky/buchanansdeluxe.png" />
+            </div>
+            <h2>Whisky</h2>
+          </div>
+          <div class="service-item">
+            <div class="icon"><img src="./img/tequila/donjulio.png" /></div>
+            <h2>Tequila</h2>
+          </div>
+          <!-- <div class="service-item">
         <div class="icon"><img src="./img/malta/malta.jpg" /></div>
         <h2>Maltas</h2>
-        <p class="price">Precio</p>
-        <p>Descripción de Productos</p>
-        <p>Tamaño de la botella</p>
-        <div>
-          <a href="#compras" type="button" class="caja">Comprar</a>
-        </div>
-      </div>
-      <div class="service-item">
-        <div class="icon"><img src="./img/ginebra/ginebra.jpg" /></div>
-        <h2>Ginebra</h2>
-        <p class="price">Precio</p>
-        <p>Descripción de Productos</p>
-        <p>Tamaño de la botella</p>
-        <div>
-          <a href="#compras" type="button" class="caja">Comprar</a>
-        </div>
-      </div>
-      <div class="service-item">
+      </div> -->
+          <div class="service-item">
+            <div class="icon"><img src="./img/ginebra/ginebra.jpg" /></div>
+            <h2>Ginebra</h2>
+          </div>
+          <!-- <div class="service-item">
         <div class="icon"><img src="./img/ron/ron.jpg" /></div>
-        <h2>Ron</h2>
-        <p class="price">Precio</p>
-        <p>Descripción de Productos</p>
-        <p>Tamaño de la botella</p>
-        <div>
-          <a href="#compras" type="button" class="caja">Comprar</a>
+         <h2>Ron</h2>
+        </div> -->
+          <div class="service-item">
+            <div class="icon"><img src="./img/ron/ron.jpg" /></div>
+            <h2>Cocteria</h2>
+          </div>
+          <div class="services container">
+            <div class="service-top">
+              <h3 class="section-title">Beneficios</h3>
+              <h2>Descubre aqui los beneficios de pertenecer al Club.</h2>
+            </div>
+          </div>
         </div>
-      </div>
-      <div class="service-item">
-        <div class="icon"><img src="./img/ron/ron.jpg" /></div>
-        <h2>Otros</h2>
-        <p>Sección de Otros</p>
-        <div>
-          <a href="#compras" type="button" class="caja">Ver mas</a>
-        </div>
-      </div>
+      </section>
+  
+    <!-- End Service Section -->
 
-      <div class="services container">
-        <div class="service-top">
-          <h3 class="section-title">Beneficios</h3>
+    <!-- Projects Section -->
+    <section id="projects">
+      <div class="projects container">
+        <div class="projects-header">
+          <h4 class="section-title">Escuela de Cocteleria</h4>
           <h2>
-            Descubre aqui los beneficios de pertenecer al Club.
+            En nuestro blog encontrarás artículos sobre vinos y licores. Aprende
+            cómo acompañar tus recetas con nuestros productos.
           </h2>
+          <br />
+        </div>
+        <div class="all-projects">
+          <div class="project-item">
+            <div class="project-img">
+              <img src="./img/coctel/coctel_1.jpg" alt="img" />
+            </div>
+          </div>
+          <br />
+          <div class="project-item">
+            <div class="project-img">
+              <img src="./img/coctel/coctel_2.jpg" alt="img" />
+            </div>
+          </div>
+          <br />
+          <div class="project-item">
+            <div class="project-img">
+              <img src="./img/coctel/coctel_3.jpg" alt="img" />
+            </div>
+          </div>
+          <br />
+          <div class="project-item">
+            <div class="project-img">
+              <img src="./img/coctel/coctel_4.jpg" alt="img" />
+            </div>
+          </div>
+          <br />
         </div>
       </div>
-    </div>
-  </section>
-  <!-- End Service Section -->
+    </section>
+    <!-- End Projects Section -->
 
-  <!-- Projects Section -->
-  <section id="projects">
-    <div class="projects container">
-      <div class="projects-header">
-        <h4 class="section-title">Escuela de Cocteleria</h4>
-        <h2>En nuestro blog encontrarás artículos sobre vinos y licores. Aprende cómo acompañar tus recetas con nuestros
-          productos.</h2><br>
-      </div>
-      <div class="all-projects">
-        <div class="project-item">
-          <div class="project-img">
-            <img src="./img/coctel/coctel_1.jpg" alt="img">
-          </div>
-        </div><br>
-        <div class="project-item">
-          <div class="project-img">
-            <img src="./img/coctel/coctel_2.jpg" alt="img">
-          </div>
-        </div><br>
-        <div class="project-item">
-          <div class="project-img">
-            <img src="./img/coctel/coctel_3.jpg" alt="img">
-          </div>
-        </div><br>
-        <div class="project-item">
-          <div class="project-img">
-            <img src="./img/coctel/coctel_4.jpg" alt="img">
-          </div>
-        </div><br>
-      </div>
-    </div>
-  </section>
-  <!-- End Projects Section -->
+    <!-- Footer -->
+    <div include-html="footer.html"></div>
+    <!-- End Footer -->
+    <script>
+      includeHTML();
+    </script>
 
-  <!-- Footer -->
-  <div include-html="footer.html"></div>
-  <!-- End Footer -->
-  <script>
-    includeHTML();
-</script>
-
-  <!-- <script src="./app.js"></script> -->
-</body>
-
+    <!-- <script src="./app.js"></script> -->
+  </body>
 </html>
