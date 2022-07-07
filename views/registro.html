@@ -41,7 +41,8 @@
     <link rel="stylesheet" href="css/vendors/font-awesome.min.css">
     <link rel="stylesheet" href="/css/style1.css">
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-    <meta name="google-signin-client_id" content="1003853917135-db4s85m58gm7ghasa73rvsaf5kbt6kib.apps.googleusercontent.com">
+    <meta name="google-signin-client_id"
+        content="1003853917135-db4s85m58gm7ghasa73rvsaf5kbt6kib.apps.googleusercontent.com">
     <script src="https://apis.google.com/js/platform.js" async defer></script>
     <title>Registro</title>
 
@@ -61,65 +62,100 @@
             </section>
 
 
-            <h1>Login</h1><br><br><br>
+            <h1>Crear nueva cuenta</h1><br><br><br>
 
-            <input type="text" name="usuario" maxlength="15"><br>
+            <input type="text" name="nombre" maxlength="30"><br>
+            <label for="nombre">
+                <h3>Nombres *</h3>
+            </label><br>
+
+            <input type="text" name="apellidos" maxlength="30"><br>
+            <label for="apellidos">
+                <h3>Apellidos *</h3>
+            </label><br>
+
+            <input type="email" name="correo" maxlength="30"><br>
+            <label for="correo">
+                <h3>Correo Electronico *</h3>
+            </label><br>
+
+            <input type="date" name="fecha_nac" maxlength="30"><br>
+            <label for="fecha_nac">
+                <h3>Fecha Nacimiento *</h3>
+            </label><br>
+
+            <input type="text" name="celular" maxlength="30"><br>
+            <label for="celular">
+                <h3>Celular</h3>
+            </label><br>
+
+            <input type="text" name="usuario" maxlength="30"><br>
             <label for="usuario">
-                <h3>Nombre Usuario</h3>
+                <h3>Nombre Usuario *</h3>
             </label><br>
 
             <input type="password" name="password" maxlength="20"><br>
             <label for="password">
-                <h3>Password</h3>
+                <h3>Password *</h3>
             </label><br>
+            
+            <form>
+            <input type="checkbox" id="aceptar" name="aceptar">
+            <label for="aceptar"> Acepto los termino y condiciones</label>
+          </form><br>
+          
 
-            <input type="submit" value="Login" class="captcha"><br><br>
-            <div class="g-recaptcha" data-sitekey="6Lc2GskgAAAAALFLac9Tytnjn-FCXPyxD48lbiHi"></div><br><br>
+            <input type="reset">
+            <button type="button" onclick="alert('Usuario registrado exitosamente')">Finalizar registro</button><br><br>
+            <!-- <div class="g-recaptcha" data-sitekey="6Lc2GskgAAAAALFLac9Tytnjn-FCXPyxD48lbiHi"></div><br><br> -->
+     
 
+            <!-- Autenticacion con google -->
 
-    <!-- Autenticacion con google -->
-
-    <div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div>
-    <script>
-      function onSignIn(googleUser) {
-        var profile = googleUser.getBasicProfile();
-        console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
-        console.log('Name: ' + profile.getName());
-        console.log('Image URL: ' + profile.getImageUrl());
-        console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
-      }
-    </script>
+            <div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div>
+            <script>
+                function onSignIn(googleUser) {
+                    var profile = googleUser.getBasicProfile();
+                    console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
+                    console.log('Name: ' + profile.getName());
+                    console.log('Image URL: ' + profile.getImageUrl());
+                    console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
+                }
+            </script>
         </form>
     </div>
-<!-- End autenticacion con Google -->
+    <!-- End autenticacion con Google -->
 
-<!-- Inicio de sesion con Facebook -->
-
-
-<script>
-    window.fbAsyncInit = function() {
-      FB.init({
-        appId      : '{your-app-id}',
-        cookie     : true,
-        xfbml      : true,
-        version    : '{api-version}'
-      });
-        
-      FB.AppEvents.logPageView();   
-        
-    };
-  
-    (function(d, s, id){
-       var js, fjs = d.getElementsByTagName(s)[0];
-       if (d.getElementById(id)) {return;}
-       js = d.createElement(s); js.id = id;
-       js.src = "https://connect.facebook.net/en_US/sdk.js";
-       fjs.parentNode.insertBefore(js, fjs);
-     }(document, 'script', 'facebook-jssdk'));
-  </script>
+    <!-- Inicio de sesion con Facebook -->
 
 
-<!-- End inicio de sesion con Facebook -->
+    <script>
+        window.fbAsyncInit = function () {
+            FB.init({
+                appId: '{your-app-id}',
+                cookie: true,
+                xfbml: true,
+                version: '{api-version}'
+            });
+
+            FB.AppEvents.logPageView();
+
+        };
+
+        (function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) {
+                return;
+            }
+            js = d.createElement(s);
+            js.id = id;
+            js.src = "https://connect.facebook.net/en_US/sdk.js";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    </script>
+
+
+    <!-- End inicio de sesion con Facebook -->
 
 
 
