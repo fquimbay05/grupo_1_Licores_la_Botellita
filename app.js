@@ -39,26 +39,26 @@ app.get('/coctel', (req, res) =>{
   res.sendFile(product);
 })
 /* app get producto wisky_chivasregal */
-app.get('/wisky_chivasregal', (req, res) =>{
-  let product= path.resolve('./views/wisky_chivasregal.html'); 
+app.get('/detalleproducto', (req, res) =>{
+  let product= path.resolve('./views/detalleproducto.html'); 
   res.sendFile(product);
 })
-/* app get para regalar */
-app.get('/para_regalar', (req, res) =>{
-  let gift= path.resolve('./views/para_regalar.html'); 
-  res.sendFile(gift);
-})
+// /* app get para regalar */
+// app.get('/para_regalar', (req, res) =>{
+//   let gift= path.resolve('./views/para_regalar.html'); 
+//   res.sendFile(gift);
+// })
 
-/* app get para el club*/
-app.get('/club', (req, res) =>{
-  let clu= path.resolve('./views/club.html'); 
-  res.sendFile(clu);
-})
-/* app get para Ofertas */
-app.get('/ofertas', (req, res) =>{
-  let offer= path.resolve('./views/ofertas.html'); 
-  res.sendFile(offer);
-})
+// /* app get para el club*/
+// app.get('/club', (req, res) =>{
+//   let clu= path.resolve('./views/club.html'); 
+//   res.sendFile(clu);
+// })
+// /* app get para Ofertas */
+// app.get('/ofertas', (req, res) =>{
+//   let offer= path.resolve('./views/ofertas.html'); 
+//   res.sendFile(offer);
+// })
 
 /* app get para servicios */
 app.get('/servicios', (req, res) =>{

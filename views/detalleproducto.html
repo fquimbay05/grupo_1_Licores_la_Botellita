@@ -41,26 +41,56 @@
 </head>
 
 <body>
-<div include-html="header.html"></div>
-<main class="main">
-<section class="last-visit">
-    <div class="products">
-      <article>
-        <img src="img/whisky/buchanansdeluxe.png" alt="buchanansdeluxe" class="product_img">
-        <!-- <div class="main-article">
-            <i class="fa-solid fa-cart-plus"></i>
-            <p class="price">$80.600</p>
-           <h4 class="description">Whisky Buchanans Deluxe 12 Años Blended</h4>
-           <p class="Tamañobotella">750ML</p>
-        </div> -->
-    </article>
- </section>
-</main>
-</div>
+    <div include-html="header.html"></div>
+    <main class="container2">
+
+        <!-- Left Column / Headphones Image -->
+        <div class="left-column">
+           <img class="product2" src="img/vinos/vinocastillo.png" alt="">
+        </div>
+  
+  
+        <!-- Right Column -->
+        <div class="right-column">
+  
+          <!-- Product Description -->
+          <div class="product-description">
+            <span>Vinos</span>
+            <h1>Vino Rosado Cousiño Cabernet Sauvignon</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem nobis totam fugit consequatur nulla, consectetur tenetur, molestiae, a voluptatem quo eveniet nemo ea praesentium. Repellat in alias molestiae doloribus cumque.</p>
+          </div>
+  
+          <!-- Product Configuration -->
+          <div class="product-configuration">
+  
+          <!-- Cable Configuration -->
+            <div class="cable-config">
+              <span>Selecciona el tamaño de la botella</span>
+  
+              <div class="cable-choose">
+                <button>375ml</button>
+                <button>750ml</button>
+                <button>1500ml</button>
+              </div>
+  
+            </div>
+          </div>
+  
+          <!-- Product Pricing -->
+          <div class="product-price">
+            <span>$ 75.900</span>
+            <a href="#" class="cart-btn">Agregar al carrito</a>
+          </div>
+        </div>
+      </main>
+   
     <div include-html="footer.html"></div>
     <script>
         includeHTML();
     </script>
+     <!-- Scripts -->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js" charset="utf-8"></script>
+     <script src="script.js" charset="utf-8"></script>
 </body>
 
 </html>
