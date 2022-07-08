@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<script>
+    function includeHTML() {
+        var z, i, elmnt, file, xhttp;
+        /*loop through a collection of all HTML elements:*/
+        z = document.getElementsByTagName("*");
+        for (i = 0; i < z.length; i++) {
+            elmnt = z[i];
+            /*search for elements with a certain atrribute:*/
+            file = elmnt.getAttribute("include-html");
+            if (file) {
+                /*make an HTTP request using the attribute value as the file name:*/
+                xhttp = new XMLHttpRequest();
+                xhttp.onreadystatechange = function () {
+                    if (this.readyState == 4) {
+                        if (this.status == 200) { elmnt.innerHTML = this.responseText; }
+                        if (this.status == 404) { elmnt.innerHTML = "Page not found."; }
+                        /*remove the attribute, and call this function once more:*/
+                        elmnt.removeAttribute("include-html");
+                        includeHTML();
+                    }
+                }
+                xhttp.open("GET", file, true);
+                xhttp.send();
+                /*exit the function:*/
+                return;
+            }
+        }
+    }
+</script>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/vendors/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/style1.css">
+    <title>Productos</title>
+
+</head>
+
+<body>
+<div include-html="header.html"></div>
+<main class="main">
+<section class="last-visit">
+    <div class="products">
+      <article>
+        <img src="img/coctel/licorconvier.png" alt="licorconvier" class="product_img">
+        <div class="main-article">
+            <i class="fa-solid fa-cart-plus"></i>
+            <p class="price">$60.700</p>
+           <h4 class="description">Licor Convier Triple Sec</h4>
+           <p class="Tamañobotella">750ML</p>
+        </div>
+    </article>
+    <article>
+        <img src="img/coctel/vermouth.png" alt="vermouth" class="product_img">
+        <div class="main-article">
+            <i class="fa-solid fa-cart-plus"></i>
+            <p class="price">$97.900</p>
+           <h4 class="description">Vermouth Noilly Prat Extra Dry</h4>
+           <p class="Tamañobotella">750ML</p>
+        </div>
+    </article>
+    <article>
+        <img src="img/coctel/martinirosso.png" alt="martinirosso" class="product_img">
+        <div class="main-article">
+            <i class="fa-solid fa-cart-plus"></i>
+            <p class="price">$53.900</p>
+           <h4 class="description">Martini Rossoxxxxxxx</h4>
+           <p class="Tamañobotella">750ML</p>
+        </div>
+    </article>
+</section>
+</main>
+</div>
+    <div include-html="footer.html"></div>
+    <script>
+        includeHTML();
+    </script>
+</body>
+
+</html>
