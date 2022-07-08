@@ -28,6 +28,21 @@ app.get('/tequila', (req, res) =>{
   let product= path.resolve('./views/tequila.html'); 
   res.sendFile(product);
 })
+/* app get producto Ron */
+app.get('/ron', (req, res) =>{
+  let product= path.resolve('./views/ron.html'); 
+  res.sendFile(product);
+})
+/* app get producto coctel */
+app.get('/coctel', (req, res) =>{
+  let product= path.resolve('./views/coctel.html'); 
+  res.sendFile(product);
+})
+/* app get producto wisky_chivasregal */
+app.get('/wisky_chivasregal', (req, res) =>{
+  let product= path.resolve('./views/wisky_chivasregal.html'); 
+  res.sendFile(product);
+})
 /* app get para regalar */
 app.get('/para_regalar', (req, res) =>{
   let gift= path.resolve('./views/para_regalar.html'); 
