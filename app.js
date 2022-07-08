@@ -12,12 +12,22 @@ app.get("/", (req, res) => {
     res.sendFile(index);
   })  
 
-/* app get producto */
+/* app get producto vinos */
 app.get('/productos', (req, res) =>{
-  let product= path.resolve('./views/productos.html'); 
+  let product= path.resolve('./views/vinos.html'); 
   res.sendFile(product);
 })
 
+/* app get producto wisky */
+app.get('/wisky', (req, res) =>{
+  let product= path.resolve('./views/wisky.html'); 
+  res.sendFile(product);
+})
+/* app get producto Tequila */
+app.get('/tequila', (req, res) =>{
+  let product= path.resolve('./views/tequila.html'); 
+  res.sendFile(product);
+})
 /* app get para regalar */
 app.get('/para_regalar', (req, res) =>{
   let gift= path.resolve('./views/para_regalar.html'); 
@@ -45,4 +55,10 @@ app.get('/servicios', (req, res) =>{
 app.get('/login', (req, res) =>{
   let login_user= path.resolve('./views/login.html'); 
   res.sendFile(login_user);
+})
+
+/* app get para login */
+app.get('/registro', (req, res) =>{
+  let registre= path.resolve('./views/registro.html'); 
+  res.sendFile(registre);
 })

@@ -29,6 +29,72 @@ img {
 	justify-content: center;
 }
 
+.banner_container {
+	margin:auto;
+	background-color: white;
+	width: 800px;
+	padding: 30px;
+}
+
+ul.slider {
+	position: relative;
+	width: 800px;
+	height: 300px;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+ul.slider li {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	position: absolute;
+	left: 0;
+	top: 0;
+	opacity: 0;
+	width: inherit;	
+	height: inherit;
+	/* background-color: white; */
+	background: #fff;
+	transition: opacity .5s;
+}
+
+ul.slider li img {
+	width: 100%;	
+	height: 300px;
+	object-fit: cover;
+}
+
+ul.slider li:first-child {
+    opacity: 1; /*Mostramos el primer <li>*/
+}
+ul.slider li:target {
+    opacity: 1; /*Mostramos el <li> del enlace que pulsemos*/
+}
+
+.menu_banner {
+	text-align: center;
+	margin: 20px;
+}
+
+.menu_banner li {
+	display: inline-block;
+	text-align: center;
+}
+
+.menu_banner li a {
+	display: inline-block;
+	color: white;
+	text-decoration: none;
+	background-color: #7F1832;;
+	padding: 10px;
+	width: 20px;
+	height: 20px;
+	font-size: 12px;
+	border-radius: 100%;
+}
+
 img {
 	height: 100%;
 	width: 100%;
@@ -56,6 +122,15 @@ p {
 	text-transform: uppercase;
 	letter-spacing: 0.50rem;
 	text-align: center;
+}
+article div.main-article{
+    width: 100%;
+     display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    border-top: 1px solid #d61f1f;
+    position: relative;
+    padding: 15px; 
 }
 
 /*Estilo de la caja */
@@ -109,7 +184,7 @@ p {
 #header .nav-bar {
 	display: flex;
 	align-items: center;
-	justify-content: space-between;
+	justify-content:space-between;
 	width: 100%;
 	height: 100%;
 	max-width: 1300px;
@@ -233,13 +308,17 @@ p {
 #header .hamburger.active .bar::after {
 	top: 0;
 }
-
+div.last-visit,
+div.offers{
+    display: flex;
+    flex-wrap: wrap;
+}
 .login {
 	text-align: center;
 	background-color: rgb(186, 211, 178);
 	border: 3px solid rgb(234, 151, 151);
 	width: 30%;
-	height: 300px;
+	height: 100%;
 	padding: 50px;
 	color: #000;
 	position:relative;
@@ -247,7 +326,16 @@ p {
 	margin: 0 auto;
 }
 
-
+/* .fa-cart-circle-plus {
+    color: salmon;
+    background-color: rgb(230, 173, 82);
+    border-radius: 0.2em;
+    padding: 0.3em;
+  }
+  
+.fa-cart-circle-plus:hover {
+    color: green;
+  } */ */
 
 
 /* End Header section */
@@ -285,7 +373,7 @@ div.carrito-compras {
 }
 
 /* Efecto degradado del color de body */
-#init::after {
+/* #init::after {
 	content: '';
 	position: absolute;
 	top: 0;
@@ -293,7 +381,7 @@ div.carrito-compras {
 	width: 100%;
 	background-color: rgb(181, 160, 160);
 	opacity: 0.5;
-}
+} */
 
 /* End init Section */
 
@@ -342,7 +430,7 @@ div.carrito-compras {
 	position: absolute;
 	height: 100%;
 	width: 100%;
-	background-image: linear-gradient(60deg, #000000cc 0%, #6799cb 100%);
+	background-image: linear-gradient(60deg, #000000cc 0%, #cfd3d6 100%); 
 	opacity: 0.9;
 	z-index: -1;
 }
@@ -358,7 +446,7 @@ div.carrito-compras {
 /* Color del titulo del texto de la caja de centro */
 #services .service-item h2 {
 	font-size: 22px;
-	color: white;
+	color: white(219, 68, 68);
 	margin-bottom: 20px;
 	text-transform: uppercase;
 }
@@ -398,21 +486,92 @@ div.carrito-compras {
 	background-color: #ff0505df;
 }
 /*Imagen vino*/
-.product_img{
-  width: 30%;
-  height: 10%;
-  padding-right: 20%;
 
+div.last-visit,
+div.offers{
+    display: flex;
+    flex-wrap: wrap;
 }
-.products{
-	display: flex;
-	flex-direction: row; 
-	flex-wrap: wrap; 
-	/* justify-content: space-between; */
-	align-items: flex-start;
-	padding-top: 60px; 
-	padding-left: 20px;
-} 
+
+.price{
+    font-size: 18px;
+    width: 30%;
+}
+
+.discount{
+    width: 70%;
+}
+
+.discount,
+.description{
+    font-size: 12px;
+    font-weight: normal;
+}
+
+h3,
+.description{
+    color: #666;
+}
+
+.description{
+    display: none;
+    margin-top: 20px;
+}
+
+section.banner img{
+    width: 100%;
+}
+/*van todos las clase de productos*/
+.main{
+	margin-top: 50px;
+}
+
+main{
+    width: 90%;
+    margin: 0 auto;
+}
+
+main section article{
+    background-color: #fff;    
+    margin: 10px 0px;
+}
+
+main section article img{
+    width: 100%;
+}
+
+main section article i,
+.discount{
+    color: #7F1832;
+}
+
+main section article i{
+    display: block;
+    font-size: 16px;
+    padding: 5px;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #7F1832;
+    background-color: #FFF;
+    border-radius: 50%;
+    position: absolute;
+    right: 20px;
+    top: -15px;
+}
+
+main section h3{
+    margin: 20px 0px;
+}
+
+article div.main-article{
+    width: 100%;
+     display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    border-top: 1px solid #ebebeb;
+    position: relative;
+    padding: 15px; 
+}
 
 /*Colores de degradación sobre la imagen*/
 #projects .project-img:after {
@@ -425,6 +584,7 @@ div.carrito-compras {
 	background-image: linear-gradient(70deg, #1777df 90%, #6ef4c1 100%);
 	opacity: 0.4;
 }
+
 
 #projects .project-img img {
 	transition: 0.8s ease transform;
@@ -481,6 +641,7 @@ div.carrito-compras {
 	color: white;
 	font-size: 1.3rem;
 }
+
 
 /* End Footer */
 /* Media Query For Tablet */
@@ -600,4 +761,37 @@ div.carrito-compras {
 			margin: 1.5%;
 		}
 	}
+}
+@media (min-width: 361px){
+    main section article .description{
+        display: block;
+    }
+
+    main section article{
+        box-shadow: 0px 0px 10px rgb(234, 151, 151);
+		border-radius: 15px;
+    }
+
+     main section div.products{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: flex-start;
+    } 
+    
+    main section div.products article{
+        width: 45%;
+    }
+
+    .price,
+    .discount{
+        width: 50%;
+    }
+}
+
+@media (min-width: 769px){
+    main section div.products article{
+        width: 22%;
+    }
 }
