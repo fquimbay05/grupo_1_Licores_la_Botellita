@@ -22,10 +22,9 @@ a {
 	text-decoration: none;
 }
 
-/* img {
+img {
 	border-radius: 50%;
-} */
-
+}
 
 /*Contenerdor Banner*/
 .container {
@@ -102,12 +101,12 @@ ul.slider li:target {
 	border-radius: 100%;
 }
 
-/* img {
+img {
 	height: 100%;
 	width: 100%;
 	object-fit: cover;
 
-} */
+}
 
 /*Estilo del parrafo del centro de la pagina */
 /*Interlineado de los productos*/
@@ -320,7 +319,7 @@ div.offers{
     display: flex;
     flex-wrap: wrap;
 }
-.login {
+/* .login {
 	text-align: center;
 	background-color: rgb(186, 211, 178);
 	border: 3px solid rgb(234, 151, 151);
@@ -331,7 +330,7 @@ div.offers{
 	position:relative;
 	top:70px;
 	margin: 0 auto;
-}
+} */
 
 /* .fa-cart-circle-plus {
     color: salmon;
