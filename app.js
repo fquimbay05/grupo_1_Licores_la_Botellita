@@ -14,13 +14,13 @@ app.get("/", (req, res) => {
 
 /* app get producto vinos */
 app.get('/productos', (req, res) =>{
-  let product= path.resolve('./views/vinos.html'); 
+  let product= path.resolve('./views/productos.html'); 
   res.sendFile(product);
 })
 
 /* app get producto wisky */
-app.get('/wisky', (req, res) =>{
-  let product= path.resolve('./views/wisky.html'); 
+app.get('/whisky', (req, res) =>{
+  let product= path.resolve('./views/whisky.html'); 
   res.sendFile(product);
 })
 /* app get producto Tequila */
@@ -43,22 +43,11 @@ app.get('/detalleproducto', (req, res) =>{
   let product= path.resolve('./views/detalleproducto.html'); 
   res.sendFile(product);
 })
-// /* app get para regalar */
-// app.get('/para_regalar', (req, res) =>{
-//   let gift= path.resolve('./views/para_regalar.html'); 
-//   res.sendFile(gift);
-// })
-
-// /* app get para el club*/
-// app.get('/club', (req, res) =>{
-//   let clu= path.resolve('./views/club.html'); 
-//   res.sendFile(clu);
-// })
-// /* app get para Ofertas */
-// app.get('/ofertas', (req, res) =>{
-//   let offer= path.resolve('./views/ofertas.html'); 
-//   res.sendFile(offer);
-// })
+// /* app get Vinod */
+app.get('/vinos', (req, res) =>{
+  let gift= path.resolve('./views/vinos.html'); 
+  res.sendFile(gift);
+})
 
 /* app get para servicios */
 app.get('/servicios', (req, res) =>{

@@ -14,8 +14,12 @@
                 xhttp = new XMLHttpRequest();
                 xhttp.onreadystatechange = function () {
                     if (this.readyState == 4) {
-                        if (this.status == 200) { elmnt.innerHTML = this.responseText; }
-                        if (this.status == 404) { elmnt.innerHTML = "Page not found."; }
+                        if (this.status == 200) {
+                            elmnt.innerHTML = this.responseText;
+                        }
+                        if (this.status == 404) {
+                            elmnt.innerHTML = "Page not found.";
+                        }
                         /*remove the attribute, and call this function once more:*/
                         elmnt.removeAttribute("include-html");
                         includeHTML();
@@ -42,11 +46,43 @@
 
 <body>
     <div include-html="header.html"></div>
-    
-    <p>
-        Pagina de productos
 
-    </p>
+
+    <!-- Service Section -->
+    <section id="services">
+        <div class="service-bottom">
+            <div class="service-item">
+                <div class="icon">
+                    <img src="./img/vinos/vinotintocastillo.png" />
+                </div>
+                <a href="/vinos"><h2>Vinos</h2></a>
+                
+            </div>
+            <div class="service-item">
+                <div class="icon">
+                    <img src="./img/whisky/buchanansdeluxe.png" />
+                </div>
+                <a href="/whisky"><h2>Whisky</h2></a>
+            </div>
+            <div class="service-item">
+                <div class="icon"><img src="./img/tequila/donjulio.png" /></div>
+                <a href="/tequila"><h2>Tequila</h2></a>
+            </div>
+
+            <div class="service-item">
+        <div class="icon"><img src="./img/ron/ron.jpg" /></div>
+        <a href="/ron"><h2>Ron</h2></a>
+        </div>
+        
+        <div class="service-item">
+                <div class="icon"><img src="./img/ron/ron.jpg" /></div>
+                <a href="/coctel"><h2>Coctelería</h2></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- End Service Section -->
+
 
     <div include-html="footer.html"></div>
     <script>

@@ -22,9 +22,10 @@ a {
 	text-decoration: none;
 }
 
-img {
+/* img {
 	border-radius: 50%;
-}
+} */
+
 
 /*Contenerdor Banner*/
 .container {
@@ -101,12 +102,12 @@ ul.slider li:target {
 	border-radius: 100%;
 }
 
-img {
+/* img {
 	height: 100%;
 	width: 100%;
 	object-fit: cover;
 
-}
+} */
 
 /*Estilo del parrafo del centro de la pagina */
 /*Interlineado de los productos*/
@@ -367,7 +368,7 @@ div.carrito-compras {
 }
 
 .blackiconcolor {
-	color: white;
+	color: rgb(255, 255, 255);
 }
 
 /* Section Color del body*/
@@ -459,7 +460,7 @@ div.carrito-compras {
 
 /* Color del texto de la caja de centro */
 #services .service-item p {
-	color: rgb(243, 249, 250);
+	color: rgb(243, 243, 250);
 	text-align: center;
 }
 
