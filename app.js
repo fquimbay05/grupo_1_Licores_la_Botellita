@@ -13,6 +13,12 @@ app.get("/", (req, res) => {
   })  
 
 /* app get producto vinos */
+app.get('/showCart', (req, res) =>{
+  let cart= path.resolve('./views/shopping_cart.html'); 
+  res.sendFile(cart);
+})
+
+/* app get producto vinos */
 app.get('/productos', (req, res) =>{
   let product= path.resolve('./views/vinos.html'); 
   res.sendFile(product);
@@ -41,6 +47,11 @@ app.get('/coctel', (req, res) =>{
 /* app get producto wisky_chivasregal */
 app.get('/detalleproducto', (req, res) =>{
   let product= path.resolve('./views/detalleproducto.html'); 
+  res.sendFile(product);
+})
+/* carrito de compras */
+app.get('/carrito', (req, res) =>{
+  let product= path.resolve('./views/carrito.html'); 
   res.sendFile(product);
 })
 // /* app get para regalar */
