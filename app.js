@@ -20,13 +20,13 @@ app.get('/showCart', (req, res) =>{
 
 /* app get producto vinos */
 app.get('/productos', (req, res) =>{
-  let product= path.resolve('./views/vinos.html'); 
+  let product= path.resolve('./views/productos.html'); 
   res.sendFile(product);
 })
 
 /* app get producto wisky */
-app.get('/wisky', (req, res) =>{
-  let product= path.resolve('./views/wisky.html'); 
+app.get('/whisky', (req, res) =>{
+  let product= path.resolve('./views/whisky.html'); 
   res.sendFile(product);
 })
 /* app get producto Tequila */
@@ -49,6 +49,7 @@ app.get('/detalleproducto', (req, res) =>{
   let product= path.resolve('./views/detalleproducto.html'); 
   res.sendFile(product);
 })
+
 /* carrito de compras */
 app.get('/carrito', (req, res) =>{
   let product= path.resolve('./views/carrito.html'); 
@@ -70,6 +71,13 @@ app.get('/carrito', (req, res) =>{
 //   let offer= path.resolve('./views/ofertas.html'); 
 //   res.sendFile(offer);
 // })
+
+// /* app get Vinod */
+app.get('/vinos', (req, res) =>{
+  let gift= path.resolve('./views/vinos.html'); 
+  res.sendFile(gift);
+})
+// >>>>>>> 0405fa04a66f982a616575b1209c70c8d1cec647
 
 /* app get para servicios */
 app.get('/servicios', (req, res) =>{

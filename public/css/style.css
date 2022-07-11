@@ -319,7 +319,7 @@ div.offers{
     display: flex;
     flex-wrap: wrap;
 }
-.login {
+/* .login {
 	text-align: center;
 	background-color: rgb(186, 211, 178);
 	border: 3px solid rgb(234, 151, 151);
@@ -330,7 +330,7 @@ div.offers{
 	position:relative;
 	top:70px;
 	margin: 0 auto;
-}
+} */
 
 /* .fa-cart-circle-plus {
     color: salmon;
@@ -367,7 +367,7 @@ div.carrito-compras {
 }
 
 .blackiconcolor {
-	color: white;
+	color: rgb(255, 255, 255);
 }
 
 /* Section Color del body*/
@@ -459,7 +459,7 @@ div.carrito-compras {
 
 /* Color del texto de la caja de centro */
 #services .service-item p {
-	color: rgb(243, 249, 250);
+	color: rgb(243, 243, 250);
 	text-align: center;
 }
 
