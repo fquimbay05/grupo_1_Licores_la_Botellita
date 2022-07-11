@@ -319,31 +319,30 @@ div.offers{
     display: flex;
     flex-wrap: wrap;
 }
-/* .login {
+.login {
 	text-align: center;
-	background-color: rgb(186, 211, 178);
+	background-color: rgba(186, 211, 178,0.6);
 	border: 3px solid rgb(234, 151, 151);
 	width: 30%;
 	height: 100%;
-	padding: 50px;
+	padding: 15px ;
 	color: #000;
 	position:relative;
 	top:70px;
 	margin: 0 auto;
-} */
+}
 
-/* .fa-cart-circle-plus {
-    color: salmon;
-    background-color: rgb(230, 173, 82);
-    border-radius: 0.2em;
-    padding: 0.3em;
-  }
-  
-.fa-cart-circle-plus:hover {
-    color: green;
-  } */ */
+#captcha{
+	position:relative;
+	left:15%;
+	margin: 0 auto;
+}
 
-
+#aut_google{
+	position:relaive;
+	left:35%;
+	margin: 0 auto;
+}
 /* End Header section */
 
 header .form .submit {

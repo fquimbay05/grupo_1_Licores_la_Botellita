@@ -74,24 +74,28 @@
                 <h3>Password</h3>
             </label><br>
 
-            
-            <div class="g-recaptcha" data-sitekey="6Lc2GskgAAAAALFLac9Tytnjn-FCXPyxD48lbiHi"></div><br>
-            <input type="submit" value="Login" class="captcha"><br><br>
+            <section id="captcha">
+                <div class="g-recaptcha" data-sitekey="6Lc2GskgAAAAALFLac9Tytnjn-FCXPyxD48lbiHi"></div><br>
 
+                <input type="submit" value="Login" class="captcha"><br><br>
+            </section>
             <h4>Ha olvidado su contraseña</h4><br>
 
-    <!-- Autenticacion con google -->
+            <!-- Autenticacion con google -->
 
-            <div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div>
-            <script>
-                function onSignIn(googleUser) {
-                    var profile = googleUser.getBasicProfile();
-                    console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
-                    console.log('Name: ' + profile.getName());
-                    console.log('Image URL: ' + profile.getImageUrl());
-                    console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
-                }
-            </script>
+            <section id="aut_google">
+                <div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div>
+                <script>
+                    function onSignIn(googleUser) {
+                        var profile = googleUser.getBasicProfile();
+                        console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
+                        console.log('Name: ' + profile.getName());
+                        console.log('Image URL: ' + profile.getImageUrl());
+                        console.log('Email: ' + profile
+                            .getEmail()); // This is null if the 'email' scope is not present.
+                    }
+                </script>
+            </section>
         </form>
     </div>
     <!-- End autenticacion con Google -->
