@@ -1,7 +1,60 @@
 <!DOCTYPE html>
 <html lang="es">
+<script>
+    function includeHTML() {
+        var z, i, elmnt, file, xhttp;
+        /*loop through a collection of all HTML elements:*/
+        z = document.getElementsByTagName("*");
+        for (i = 0; i < z.length; i++) {
+            elmnt = z[i];
+            /*search for elements with a certain atrribute:*/
+            file = elmnt.getAttribute("include-html");
+            if (file) {
+                /*make an HTTP request using the attribute value as the file name:*/
+                xhttp = new XMLHttpRequest();
+                xhttp.onreadystatechange = function () {
+                    if (this.readyState == 4) {
+                        if (this.status == 200) {
+                            elmnt.innerHTML = this.responseText;
+                        }
+                        if (this.status == 404) {
+                            elmnt.innerHTML = "Page not found.";
+                        }
+                        /*remove the attribute, and call this function once more:*/
+                        elmnt.removeAttribute("include-html");
+                        includeHTML();
+                    }
+                }
+                xhttp.open("GET", file, true);
+                xhttp.send();
+                /*exit the function:*/
+                return;
+            }
+        }
+    }
+</script>
+
 <head>
-    <link rel="stylesheet" href="/css/shopping_cart.css">
+
+
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/vendors/font-awesome.min.css">
+        <link rel="stylesheet" href="/css/shopping_cart.css">
+        <link rel="stylesheet" href="/css/style.css">
+        <link rel="stylesheet" href="/css/footer-distributed-with-address-and-phones.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+        <script src="https://kit.fontawesome.com/6822eedb87.js" crossorigin="anonymous"></script>
+        <title>Compras</title>
+
+</head>
+
+<body>
+    <div include-html="header.html"></div>
+
+
+    
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script type="text/javascript">
       
@@ -74,32 +127,31 @@
          }
      });
     </script>
-</head>
 
 <div class="container">
-    <div class="heading">
-      <h1>
+    <!-- <div class="heading"> -->
+      <!-- <h1>
         <span class="shopper">s</span> Shopping Cart
       </h1>
       
       <a href="#" class="visibility-cart transition is-open">X</a>    
     </div>
-    
+     -->
     <div class="cart transition is-open">
       
-      <a href="#" class="btn btn-update">Update cart</a>
+      <!-- <a href="#" class="btn btn-update">Update cart</a> -->
       
       
       <div class="table">
         
         <div class="layout-inline row th">
-          <div class="col col-pro">Product</div>
+          <div class="col col-pro">Producto</div>
           <div class="col col-price align-center "> 
-            Price
+            Precio
           </div>
-          <div class="col col-qty align-center">QTY</div>
-          <div class="col">VAT</div>
-          <div class="col">Total</div>
+          <div class="col col-qty align-center">Cantidad</div>
+          <div class="col">Valor unitario</div>
+          <div class="col">Valor Total</div>
         </div>
         
         <div class="layout-inline row">
@@ -180,13 +232,13 @@
          <div class="tf">
            <div class="row layout-inline">
              <div class="col">
-               <p>VAT</p>
+               <p>Valor</p>
              </div>
              <div class="col"></div>
            </div>
            <div class="row layout-inline">
              <div class="col">
-               <p>Shipping</p>
+               <p>IVA</p>
              </div>
              <div class="col"></div>
            </div>
@@ -199,16 +251,15 @@
          </div>         
     </div>
       
-      <a href="#" class="btn btn-update">Update cart</a>
+      <!-- <a href="#" class="btn btn-update">Update cart</a> -->
     
   </div>
 </div>
 
-
 <div include-html="footer.html"></div>
-    <script>
-        includeHTML();
-    </script>
+<script>
+    includeHTML();
+</script>
 </body>
 
 </html>
