@@ -104,7 +104,7 @@ ul.slider li:target {
 img {
 	height: 100%;
 	width: 100%;
-	object-fit: cover;
+
 
 }
 
@@ -365,6 +365,7 @@ div.carrito-compras {
 	text-align: right;
 }
 
+/*Color de los iconos de busqueda, login, registro*/
 .blackiconcolor {
 	color: rgb(255, 255, 255);
 }
@@ -376,17 +377,6 @@ div.carrito-compras {
 	position: relative;
 	width: 100%;
 }
-
-/* Efecto degradado del color de body */
-/* #init::after {
-	content: '';
-	position: absolute;
-	top: 0;
-	height: 100%;
-	width: 100%;
-	background-color: rgb(181, 160, 160);
-	opacity: 0.5;
-} */
 
 /* End init Section */
 
@@ -404,7 +394,7 @@ div.carrito-compras {
 	max-width: 900px;
 }
 
-/* Diseño de las cajas grandes del centro de la pagina */
+/* Diseño de los accesos pagina productos */
 
 #services .service-bottom {
 	display: flex;
@@ -440,7 +430,7 @@ div.carrito-compras {
 	z-index: -1;
 }
 
-/* Estilo de las imagenes pequeñas del centro de la pagina */
+/* Estilo de las imagenes pequeñas de productos */
 #services .service-bottom .icon {
 	height: 80px;
 	width: 80px;
@@ -448,27 +438,13 @@ div.carrito-compras {
 
 }
 
-/* Color del titulo del texto de la caja de centro */
+/* Texto de la seccion productos */
 #services .service-item h2 {
 	font-size: 22px;
 	color: white(219, 68, 68);
 	margin-bottom: 20px;
 	text-transform: uppercase;
 }
-
-/* Color del texto de la caja de centro */
-#services .service-item p {
-	color: rgb(243, 243, 250);
-	text-align: center;
-}
-
-#services .service-item .caja {
-	width: 8vw;
-	border: solid 2px #7F1832(0, 255, 98);
-	padding: 0.2vw;
-	margin: 0.3vw;
-}
-
 /* End Services Section */
 
 /* Projects section, contenido de proyectos recientes*/
