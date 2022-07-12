@@ -111,10 +111,10 @@ img {
 	width: 100%;
 }
 
-/*Estilo del parrafo del centro de la pagina */
+
 /*Interlineado de los productos*/
 p {
-	color: rgb(0, 0, 0);
+	color: rgb(222, 15, 15);
 	font-size: 1.4rem;
 	margin-top: 5px;
 	line-height: 2rem;
@@ -350,13 +350,7 @@ div.offers {
 
 /* End Header section */
 
-header .form .submit {
-	background-color: #FFF;
-	border: 1px solid #000;
-	color: #FFF;
-	width: 20%;
-}
-
+/*Estilo caja de busqueda header*/
 header .form .input {
 	background-color: #FFF;
 	border: 1px solid #000;
@@ -375,13 +369,6 @@ div.carrito-compras {
 	color: rgb(255, 255, 255);
 }
 
-/* Section Color del body*/
-#init {
-
-	background-color: rgb(48, 216, 225);
-	position: relative;
-	width: 100%;
-}
 /* End init Section */
 
 /* Diseño de los accesos pagina productos */
