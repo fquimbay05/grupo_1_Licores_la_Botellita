@@ -64,15 +64,7 @@ html {
       background: #ecf0f1;
       box-shadow: 0 0.5em 0 rgba(138, 148, 152, 0.2);
     } */
-  
-  .heading {
-    padding: 1em;
-    position: relative;
-    z-index: 1;
-    color: #f7f7f7;
-    background: #f34d35;
-  }
-  
+ 
   .cart {
     margin: 2.5em;
     overflow: hidden;
@@ -101,7 +93,7 @@ html {
   }
   
   .th {
-    background: #f34d35;
+    background: #7F1832;
     color: #fff;
     /* text-transform: uppercase; */
     font-weight: bold;
@@ -109,7 +101,7 @@ html {
   }
   
   .tf {
-    background: #f34d35;
+    background: #7F1832;
     /* text-transform: uppercase; */
     text-align: right;
     font-size: 1.2em;  
