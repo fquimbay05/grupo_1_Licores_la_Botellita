@@ -51,9 +51,9 @@ app.get('/detalleproducto', (req, res) =>{
 })
 
 /* carrito de compras */
-app.get('/carrito', (req, res) =>{
-  let product= path.resolve('./views/carrito.html'); 
-  res.sendFile(product);
+app.get('/compras', (req, res) =>{
+  let compra= path.resolve('./views/compras.html'); 
+  res.sendFile(compra);
 })
 
 // /* app get Vinos */
