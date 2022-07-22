@@ -892,6 +892,101 @@ article div.main-article {
 	}
 }
 
+.recipe-ingredients h3{
+	background: #7F1832;
+	color: #fff;
+	display: inline;
+	font-size: 18px;
+	font-weight: 700;
+	padding: 4px 8px;
+	text-transform: uppercase;
+  }
+
+.recipe-ingredients ul.ingredientes {
+	border-bottom: 0;
+	color: #404040;
+	font-size: 16px;
+	list-style: circle;
+	padding: 4px 0;
+	border-right: 1px solid #ecd0d1;
+	margin: 20px 0 0;
+	padding: 0 0 0 18px;
+}
+.recipe-ingredients ol.ingredientes{
+	border-bottom: 0;
+	color: #404040;
+	font-size: 16px;
+	list-style: circle;
+	padding: 4px 0;
+	border-right: 1px solid #ecd0d1;
+	margin: 20px 0 0;
+	padding: 0 0 0 18px;
+}
+
+.recipe-ingredients h2{
+	color: #333;
+	font-size: 13px;
+	line-height: 15px;
+	font-weight: 700;
+	background: #fff;
+	border: 1px solid #333;
+	border-radius: 5px;
+	letter-spacing: 0;
+	margin: 0 4px;
+	padding: 0 7px;
+	display: inline-table;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+.ingredient {
+	width: 100%;
+	padding-left: 0;
+	border-bottom: 0;
+	color: #404040;
+	font-size: 16px;
+	list-style: circle;
+	padding: 4px 0;
+  }
+
+.ingredient li {
+	border-color: rgba( 221, 51, 51, 0.05 );
+}
+
+
+
+.banner-1 {
+    width: 700px;
+    height: 300px;
+    border: 3px solid #7F1832;
+    margin: auto;
+    background-size:cover;
+    animation: banner-1 10s infinite;
+    animation-direction:normal;
+    object-fit:scale-down;
+  }
+
+  @keyframes banner-1 {
+    0%, 30% {
+      background-image: url(/img/banner/banner-nuevos-productos.png);
+      opacity: 1;
+    }
+    31%, 34% {
+      opacity: 0.1;
+    }
+    35%, 65% {
+      background-image: url(/img/banner/banner-licor43.jpg);
+      opacity: 1;
+    }
+    66%, 99% {
+      opacity: 0.1;
+    }
+    70%, 100% {
+      background: url(/img/banner/banner-coctel.jpg);
+      opacity: 1;
+    }
+  }
+
 @media (max-width: 535px) {
 	.left-column img {
 		width: 220px;

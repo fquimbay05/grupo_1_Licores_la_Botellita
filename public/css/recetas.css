@@ -1,0 +1,31 @@
+.banner-1 {
+    width: 700px;
+    height: 300px;
+    border: 3px solid #7F1832;
+    margin: auto;
+    background-size:cover;
+    animation: banner-1 10s infinite;
+    animation-direction:normal;
+    object-fit:scale-down;
+  }
+
+  @keyframes banner-1 {
+    0%, 30% {
+      background-image: url(/img/banner/banner-nuevos-productos.png);
+      opacity: 1;
+    }
+    31%, 34% {
+      opacity: 0.1;
+    }
+    35%, 65% {
+      background-image: url(/img/banner/banner-licor43.jpg);
+      opacity: 1;
+    }
+    66%, 99% {
+      opacity: 0.1;
+    }
+    70%, 100% {
+      background: url(/img/banner/banner-coctel.jpg);
+      opacity: 1;
+    }
+  }
