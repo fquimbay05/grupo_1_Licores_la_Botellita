@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<script>
+  function includeHTML() {
+    var z, i, elmnt, file, xhttp;
+    /*loop through a collection of all HTML elements:*/
+    z = document.getElementsByTagName("*");
+    for (i = 0; i < z.length; i++) {
+      elmnt = z[i];
+      /*search for elements with a certain atrribute:*/
+      file = elmnt.getAttribute("include-html");
+      if (file) {
+        /*make an HTTP request using the attribute value as the file name:*/
+        xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function () {
+          if (this.readyState == 4) {
+            if (this.status == 200) { elmnt.innerHTML = this.responseText; }
+            if (this.status == 404) { elmnt.innerHTML = "Page not found."; }
+            /*remove the attribute, and call this function once more:*/
+            elmnt.removeAttribute("include-html");
+            includeHTML();
+          }
+        }
+        xhttp.open("GET", file, true);
+        xhttp.send();
+        /*exit the function:*/
+        return;
+      }
+    }
+  }
+</script>
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/vendors/font-awesome.min.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/footer-distributed-with-address-and-phones.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+  <script src="https://kit.fontawesome.com/6822eedb87.js" crossorigin="anonymous"></script>
+  <title>Productos</title>
+
+</head>
+
+<body>
+  <div include-html="header.html"></div>
+  <main class="container2">
+
+    <!-- Left Column / Headphones Image -->
+    <div class="left-column">
+      <img class="product2" src="img/coctel/margarita.jpg" alt="">
+    </div>
+
+
+    <!-- Right Column -->
+    <div class="right-column">
+
+      <!-- Product Description -->
+      <div class="recipe-ingredients">
+        <h3>Ingredientes</h3>
+        <ul class="ingredientes">
+          <li itemprop="ingredient" class="ingredient">
+            <span class="cantidad">5</span>
+            <span class="descripcion">cl de tequila</span>
+          </li>
+          <li itemprop="ingredient" class="ingredient">
+            <span class="cantidad">2,5 </span>
+            <span class="descripcion">cl de triple seco que es licor de naranja. Ejemplos de licores triple seco son Cointreau o Grand Marnier.</span>
+          </li>
+          <li itemprop="ingredient" class="ingredient"><span class="cantidad">2,5</span>
+            <span class="descripcion">cl de zumo de lima recién exprimido y un trocito de lima para mojar el borde de las copas.</span>
+          </li>
+          <li itemprop="ingredient" class="ingredient"><span class="cantidad"></span>
+            <span class="descripcion">Sal</span>
+          </li>
+          <li itemprop="ingredient" class="ingredient"><span class="cantidad"></span>
+            <span class="descripcion">Hielos</span>
+          </li>
+        </ul> <br>
+      </div><!-- ingredients -->
+
+      <div class="recipe-ingredients">
+        <h3>Instrucciones</h3>
+        <ol class="ingredientes">
+          <li itemprop="ingredient" class="ingredient">Primero decoraremos el borde de sal. Cogemos un vaso ancho y ovalado (el clásico de margarita) 
+            lo mojamos en un poco de sirope de azúcar presionando y a continuación, lo pasamos por un plato con sal, colocamos la lima y reservamos</li>
+          <li itemprop="ingredient" class="ingredient">Exprimimos las limas para extraer su zumo, puedes utilizar un prensador de limas que resulta de lo más útil pero también te sirve cualquier exprimidor que utilices para limones o naranjas. 
+            En nuestro caso no colamos el zumo, aunque si cae alguna pepita la retiramos.
+          </li>
+          <li itemprop="ingredient" class="ingredient">Con la ayuda del vaso medidor vertemos en la coctelera el zumo de lima recién exprimido, el tequila, y el triple seco, en este orden.
+          </li>
+          <li itemprop="ingredient" class="ingredient">Metemos cuatro o cinco cubos de hielo y agitamos bien durante unos 15 segundo, con brío y arte. 
+            Luego servimos el cóctel con ayuda del filtro de la propia coctelera o el colador en el vaso que tenemos preparado anteriormente.
+          </li>                    
+        </ol>
+      </div><!-- .instructions -->
+      <br>
+      <div class="recipe-ingredients">
+        <h2> <strong> Consejos básicos para preparar margarita </strong></h2>
+        <ul class="ingredientes">
+          <li class="ingredient">Es importante que para la creación de este cóctel se utilicen buenos productos, de lo contrario no podríamos apreciar 
+            correctamente el delicioso sabor de uno de los cócteles más famosos de la historia.</li>
+          <li class="ingredient">Para decorar, también se suele colocar una rodaja redonda de lima o de limón en el borde de la copa y si se quiere rizar el rizo, 
+            se puede colocar la tradicional sombrilla de madera y papel de colores.</li>
+        </ul>
+      </div>
+
+    </div>
+    </div>
+  </main>
+
+  <div include-html="footer.html"></div>
+  <script>
+    includeHTML();
+  </script>
+  <!-- Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js" charset="utf-8"></script>
+  <script src="script.js" charset="utf-8"></script>
+</body>
+
+</html>

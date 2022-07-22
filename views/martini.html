@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<script>
+  function includeHTML() {
+    var z, i, elmnt, file, xhttp;
+    /*loop through a collection of all HTML elements:*/
+    z = document.getElementsByTagName("*");
+    for (i = 0; i < z.length; i++) {
+      elmnt = z[i];
+      /*search for elements with a certain atrribute:*/
+      file = elmnt.getAttribute("include-html");
+      if (file) {
+        /*make an HTTP request using the attribute value as the file name:*/
+        xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function () {
+          if (this.readyState == 4) {
+            if (this.status == 200) { elmnt.innerHTML = this.responseText; }
+            if (this.status == 404) { elmnt.innerHTML = "Page not found."; }
+            /*remove the attribute, and call this function once more:*/
+            elmnt.removeAttribute("include-html");
+            includeHTML();
+          }
+        }
+        xhttp.open("GET", file, true);
+        xhttp.send();
+        /*exit the function:*/
+        return;
+      }
+    }
+  }
+</script>
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/vendors/font-awesome.min.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/footer-distributed-with-address-and-phones.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+  <script src="https://kit.fontawesome.com/6822eedb87.js" crossorigin="anonymous"></script>
+  <title>Productos</title>
+
+</head>
+
+<body>
+  <div include-html="header.html"></div>
+  <main class="container2">
+
+    <!-- Left Column / Headphones Image -->
+    <div class="left-column">
+      <img class="product2" src="img/coctel/martini.jpg" alt="martini">
+    </div>
+
+
+    <!-- Right Column -->
+    <div class="right-column">
+
+      <!-- Product Description -->
+      <div class="recipe-ingredients">
+        <h3>Ingredientes</h3>
+        <ul class="ingredientes">
+          <li itemprop="ingredient" class="ingredient">
+            <span class="cantidad">60</span>
+            <span class="descripcion">mL ginebra</span>
+          </li>
+          <li itemprop="ingredient" class="ingredient">
+            <span class="cantidad">30</span>
+            <span class="descripcion">mL vermut seco</span>
+          </li>
+        </ul> <br>
+      </div><!-- ingredients -->
+
+      <div class="recipe-ingredients">
+        <h3>Instrucciones</h3>
+        <ol class="ingredientes">
+          <li itemprop="ingredient" class="ingredient">En un vaso mezclador agregarla ginebra, vermut seco, e hielo.</li>
+          <li itemprop="ingredient" class="ingredient">Revolver ingredientes por 20-25 segundos.  </li>
+          <li itemprop="ingredient" class="ingredient">Usando un colador Julep colar el cóctel y servir en la copa cupé.  </li>
+          <li itemprop="ingredient" class="ingredient">Adornar con una aceituna o un toque de limón.  </li>                    
+        </ol>
+      </div><!-- .instructions -->
+      <br>
+      <div class="recipe-ingredients">
+        <h2> <strong> Consejos básicos para preparar martini </strong></h2>
+        <ul class="ingredientes">
+          <li class="ingredient">Tenga en cuenta que las calorías de esta receta es de 281</li>
+          <!-- <li class="ingredient"></li> -->
+
+        </ul>
+      </div>
+
+    </div>
+    </div>
+  </main>
+
+  <div include-html="footer.html"></div>
+  <script>
+    includeHTML();
+  </script>
+  <!-- Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js" charset="utf-8"></script>
+  <script src="script.js" charset="utf-8"></script>
+</body>
+
+</html>
