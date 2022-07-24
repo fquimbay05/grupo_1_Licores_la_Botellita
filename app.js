@@ -1,9 +1,14 @@
 const express = require("express"); //Requerimos el modulo Express
 const app = express(); //Ejecutamos la función, creamos una variable y almacenamos express.
 const path = require('path')
+const rutasProductos = require('./routes/productos.js');
+
 app.use(express.static('public'))
 app.use(express.static('views'))
 
+app.set('view engine', 'ejs');
+
+app.use('/productos',rutasProductos);
 
 app.listen(3000, () => {console.log("Servidor ejecutando en localhost:3000")});
 
@@ -19,10 +24,11 @@ app.get('/showCart', (req, res) =>{
 })
 
 /* app get producto vinos */
-app.get('/productos', (req, res) =>{
-  let product= path.resolve('./views/productos.html'); 
-  res.sendFile(product);
-})
+// app.get('/productos', (req, res) =>{
+//   let product= path.resolve('./views/productos.html'); 
+//   res.sendFile(product);
+// })
+
 
 /* app get producto wisky */
 app.get('/whisky', (req, res) =>{
