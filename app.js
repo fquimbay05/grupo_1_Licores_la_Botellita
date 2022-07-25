@@ -23,13 +23,6 @@ app.get('/showCart', (req, res) =>{
   res.sendFile(cart);
 })
 
-/* app get producto vinos */
-// app.get('/productos', (req, res) =>{
-//   let product= path.resolve('./views/productos.html'); 
-//   res.sendFile(product);
-// })
-
-
 /* app get producto wisky */
 app.get('/whisky', (req, res) =>{
   let product= path.resolve('./views/whisky.html'); 
