@@ -5,6 +5,7 @@ const path = require('path')
 const rutasProductos = require('./routes/productos.js');
 var rutasIndex = require('./routes/index');
 var rutasRecetas = require('./routes/recetas');
+
 const methodOverride = require('method-override');
 
 // app.use(express.static('public'))
@@ -25,6 +26,7 @@ app.use(methodOverride('_method'));
 
 app.use('/', rutasIndex);
 app.use('/recetas', rutasRecetas);
+app.use('/servicios', rutasRecetas);
 
 /* app get producto wisky */
 app.get('/whisky', (req, res) =>{
