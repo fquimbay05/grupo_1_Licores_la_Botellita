@@ -12,7 +12,19 @@
     </header> 
 
     <h1> Listado de Recetas </h1>
-    <h2> Mojito </h2>
+    <br>
+    <div class="ingredient">
+        <ul>
+            <% listaRecetas.forEach(function(listaRecetas) { %>
+                <li>
+                    <a href="/<%= listaRecetas.html %>" >
+                        <strong><%= listaRecetas.id %></strong>
+                        Receta <%= listaRecetas.titulo %>, - <%= listaRecetas.descripcion %>
+                    </a>
+                </li>
+            <% }); %>
+        </ul>
+    </div>
 
     <footer>
         <%- include('partials/footer'); %>

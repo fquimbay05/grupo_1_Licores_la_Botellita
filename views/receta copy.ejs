@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <%- include('partials/header'); %>
+    </header> 
+
+    <h1> Listado de Recetas </h1>
+    <h2> Mojito </h2>
+
+    <div class="col-12">
+        <form action="/recetas/edit/<%= idReceta.id %>" method="post" enctype="multipart/form-data">
+            <div class="row product-detail">
+                <div class="col-12 col-md-6">
+                    <label for="name" class="form-label">Nombre:</label>
+                    <input type="text" id="name" name="name" placeholder="<%= receta.titulo %>" class="form-input">
+                </div>
+                <div class="col-12 col-md-6">
+                    <label for="price" class="form-label">Precio del producto:</label>
+                    <input type="text" id="price" name="price" placeholder="<%= receta.precio %>" class="form-input">
+                </div>
+                <div class="col-12">
+                    <label for="description" class="form-label">Descripción:</label>
+                    <textarea name="description" id="description" class="form-input"><%= receta.descripcion %></textarea>
+                </div>
+                <!-- <div class="col-12">
+                    <button type="submit" class="buy-now-button">Guardar producto</button>
+                </div> -->
+            </div>
+        </form>
+    </div>
+
+    <footer>
+        <%- include('partials/footer'); %>
+    </footer>
+    
+</body>
+</html>

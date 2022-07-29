@@ -1,26 +1,27 @@
 const express = require("express"); //Requerimos el modulo Express
 const app = express(); //Ejecutamos la función, creamos una variable y almacenamos express.
 const path = require('path')
+
 const rutasProductos = require('./routes/productos.js');
+var rutasIndex = require('./routes/index');
+var rutasRecetas = require('./routes/recetas');
+const methodOverride = require('method-override');
 
-app.use(express.static('public'))
-app.use(express.static('views'))
+// app.use(express.static('public'))
+// app.use(express.static('views'))
 
+app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'views')));
+
+// view engine setup
+app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
 app.use('/productos',rutasProductos);
 
 app.listen(3000, () => {console.log("Servidor ejecutando en localhost:3000")});
 
-const methodOverride = require('method-override');
 app.use(methodOverride('_method'));
-
-// view engine setup
-app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'ejs');
-
-app.use(express.static(path.join(__dirname, 'public')));
-app.use(express.static(path.join(__dirname, 'views')));
 
 app.use('/', rutasIndex);
 app.use('/recetas', rutasRecetas);
@@ -50,5 +51,6 @@ app.get('/detalleproducto', (req, res) =>{
   let product= path.resolve('./views/detalleproducto.html'); 
   res.sendFile(product);
 })
+
 
 module.exports = app;
