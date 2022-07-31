@@ -1,7 +1,9 @@
 const express = require("express"); //Requerimos el modulo Express
 const app = express(); //Ejecutamos la función, creamos una variable y almacenamos express.
 const path = require('path')
+
 const rutasProductos = require('./routes/productos.js');
+<<<<<<< HEAD
 // const rutasVinos = require('./routes/vinos.js');
 
 const methodOverride = require('method-override');
@@ -9,6 +11,21 @@ app.use(methodOverride('_method'));
 
 app.use(express.static('public'))
 app.use(express.static('views'))
+=======
+var rutasIndex = require('./routes/index');
+var rutasRecetas = require('./routes/recetas');
+
+const methodOverride = require('method-override');
+
+// app.use(express.static('public'))
+// app.use(express.static('views'))
+
+app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'views')));
+
+// view engine setup
+app.set('views', path.join(__dirname, 'views'));
+>>>>>>> 6f229286c80423ab132294e384f313a5858e97d9
 app.set('view engine', 'ejs');
 
 app.use('/productos',rutasProductos);
@@ -17,6 +34,7 @@ app.use('/productos',rutasProductos);
 
 app.listen(3000, () => {console.log("Servidor ejecutando en localhost:3000")});
 
+<<<<<<< HEAD
 
 // /* app get Vinos */
 app.get('/vinos', (req, res) =>{
@@ -34,6 +52,13 @@ app.get('/showCart', (req, res) =>{
   let cart= path.resolve('./views/shopping_cart.html');
   res.sendFile(cart);
 })
+=======
+app.use(methodOverride('_method'));
+
+app.use('/', rutasIndex);
+app.use('/recetas', rutasRecetas);
+app.use('/servicios', rutasRecetas);
+>>>>>>> 6f229286c80423ab132294e384f313a5858e97d9
 
 /* app get producto wisky */
 app.get('/whisky', (req, res) =>{
@@ -61,6 +86,7 @@ app.get('/detalleproducto', (req, res) =>{
   res.sendFile(product);
 })
 
+<<<<<<< HEAD
 /* carrito de compras */
 app.get('/compras', (req, res) =>{
   let compra= path.resolve('./views/compras.html');
@@ -86,3 +112,7 @@ app.get('/registro', (req, res) =>{
   let registre= path.resolve('./views/registro.html');
   res.sendFile(registre);
 })
+=======
+
+module.exports = app;
+>>>>>>> 6f229286c80423ab132294e384f313a5858e97d9
