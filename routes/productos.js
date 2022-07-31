@@ -6,6 +6,7 @@ const productosController = require('../controllers/productosController.js');
 router.get('/:idProducto', productosController.listar);
 router.get('/', productosController.leer);
 
+
 //Editar un producto
 router.put
 
