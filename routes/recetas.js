@@ -8,8 +8,7 @@ router.get('/', mainController.index);
 
 router.get('/recetas', mainController.receta);
 router.get('/recetas/:idReceta', mainController.edit);
-router.get('/:idReceta', mainController.edit);
-router.get('/recetas', mainController.receta);
+// router.get('/:idReceta', mainController.edit);
 
 router.get('/servicios', mainController.servicio);
 
