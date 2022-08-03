@@ -17,7 +17,7 @@
         <ul>
             <% listaRecetas.forEach(function(listaRecetas) { %>
                 <li>
-                    <a href="/<%= listaRecetas.html %>" >
+                    <a href="/recetas/<%= listaRecetas.id %>">
                         <strong><%= listaRecetas.id %></strong>
                         Receta <%= listaRecetas.titulo %>, - <%= listaRecetas.descripcion %>
                     </a>

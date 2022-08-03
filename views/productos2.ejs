@@ -14,15 +14,17 @@
     <main class="main">
         <section class="last-visit">
             <div class="products">
-              <article>
-                <img src="../img/<%= producto.categoria %>/<%= producto.img %>" alt="<%= producto.categoria %>" class="product_img">
+                <% producto.forEach(function(producto){  %>
+                <article>
+                <img src="../img/<%= producto.categoria %>/<%= producto.img %>" alt="<%= producto.categoria %>" class="product_img"> 
                 <div class="main-article">
                     <i class="fa-solid fa-cart-plus"></i>
                     <p class="price">$<%= producto.precio %></p>
-                   <h4 class="description"><%= producto.descripcion %></h4>
-                   <p class="Tamañobotella">750ML</p>
+                   <h4 class="description"><%= producto.descripcion %></h4> <br>
+                   <h4 class="Tamañobotella"><%= producto.tamano %></h4>
                 </div>
             </article>
+            <% }) %>
          </section>
      </main>
 

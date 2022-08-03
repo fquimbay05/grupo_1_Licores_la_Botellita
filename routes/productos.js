@@ -8,6 +8,9 @@ router.get('/', productosController.leer);
 
 router.get('/:idProducto', productosController.editar);
 
+/*** Borrar una Receta***/ 
+// router.delete('/delete/:id', productsController.destroy); 
+
 // router.get('/productos/:idProducto', productosController.editar);
 
 //Editar un producto

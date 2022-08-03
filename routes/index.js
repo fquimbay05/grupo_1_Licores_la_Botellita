@@ -13,5 +13,10 @@ router.get('/registro', mainController.registro);
 router.get('/compras', mainController.compras);
 router.get('/ron', productosController.ron);
 router.get('/vinos', productosController.vino);
+router.get('/whisky', productosController.whisky);
+router.get('/tequila', productosController.tequila);
+router.get('/coctel', productosController.coctel);
+
+router.get('/recetas/:idReceta', mainController.edit);
 
 module.exports = router;

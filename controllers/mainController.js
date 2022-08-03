@@ -64,6 +64,13 @@ const mainController = {
     // res.send('Listado de Recetas');
     //res.render("receta");
   },
+  destroy : (req, res) => {
+		let id = req.params.id;
+		let recetaFinal = products.filter(receta => receta.id != id);
+    res.send("Receta: " + recetaFinal);
+		// fs.writeFileSync(productsFilePath, JSON.stringify(finalProducts, null, ' '));
+		// res.redirect('/');
+	},
   editar: (req, res) => {
     res.send("Receta: " + req.params.idReceta);
   }, 
