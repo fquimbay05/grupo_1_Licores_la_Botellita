@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 const path = require('path');
 
-const rutasProductos = require('./routes/productos.js');
+const rutasProductos = require('./routes/index.js');
 var rutasIndex = require('./routes/index');
 var rutasRecetas = require('./routes/recetas.js');
 const methodOverride = require('method-override');

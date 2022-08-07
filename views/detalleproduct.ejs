@@ -25,7 +25,7 @@
 
         <!-- Left Column / Headphones Image -->
         <div class="left-column">
-           <img class="product2" src="img/vino/vinocastillo.png" alt="">
+           <img class="product2" src="../img/<%= producto.categoria %>/<%= producto.img %>" alt="">
         </div>
   
   
@@ -34,9 +34,9 @@
   
           <!-- Product Description -->
           <div class="product-description">
-            <span>Vinos</span>
-            <h1>Vino Rosado Cousiño Cabernet Sauvignon</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem nobis totam fugit consequatur nulla, consectetur tenetur, molestiae, a voluptatem quo eveniet nemo ea praesentium. Repellat in alias molestiae doloribus cumque.</p>
+            <span><%= producto.categoria %></span>
+            <h1><%= producto.nombre %></h1> 
+            <p><%= producto.descripcion %></p>
           </div>
   
           <!-- Product Configuration -->
@@ -44,12 +44,10 @@
   
           <!-- Cable Configuration -->
             <div class="cable-config">
-              <span>Selecciona el tamaño de la botella</span>
+              <span>Tamaño de la botella</span>
   
               <div class="cable-choose">
-                <button>375ml</button>
-                <button>750ml</button>
-                <button>1500ml</button>
+                <p><%= producto.tamano %></p>
               </div>
   
             </div>
@@ -57,7 +55,7 @@
   
           <!-- Product Pricing -->
           <div class="product-price">
-            <span>$ 75.900</span>
+            <span>$ <%= producto.precio %></span>
             <a href="#" class="cart-btn">Agregar al carrito</a>
           </div>
         </div>

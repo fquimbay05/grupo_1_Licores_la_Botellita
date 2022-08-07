@@ -1,12 +1,12 @@
-let express = require('express');
-let router = express.Router();
+// let express = require('express');
+// let router = express.Router();
 
 //Listar un producto
 const productosController = require('../controllers/productosController.js');
 // router.get('/:idProducto', productosController.listar);
-router.get('/', productosController.leer);
+// router.get('/productos', productosController.leer);
 
-router.get('/:idProducto', productosController.editar);
+// router.get('/:idProducto', productosController.editar);
 
 /*** Borrar una Receta***/ 
 // router.delete('/delete/:id', productsController.destroy); 
@@ -14,12 +14,12 @@ router.get('/:idProducto', productosController.editar);
 // router.get('/productos/:idProducto', productosController.editar);
 
 //Editar un producto
-router.put
+// router.put
 
 //Adicionar un producto
-router.post
+// router.post
 
 //Eliminar un producto
-router.delete
+// router.delete
 
-module.exports=router;
+// module.exports=router;

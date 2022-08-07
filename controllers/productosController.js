@@ -259,5 +259,15 @@ const controladorProductos = {
     res.render("productos2", { producto: producto });
     res.send('Listado de vinos');
   },
+  detalle: (req, res) => {
+    //res.send("Receta  " + req.params.idProducto);
+    let id = req.params.idProducto;
+    let producto = listaProductos.find((producto) => producto.id == id);
+    let categoria = producto.categoria;
+    console.log(categoria);
+    //res.render(rederizar);
+    res.render("detalleproduct.ejs", { producto: producto });
+ }
+
 };
 module.exports = controladorProductos;

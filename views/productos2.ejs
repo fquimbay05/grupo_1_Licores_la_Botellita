@@ -16,7 +16,10 @@
             <div class="products">
                 <% producto.forEach(function(producto){  %>
                 <article>
-                <img src="../img/<%= producto.categoria %>/<%= producto.img %>" alt="<%= producto.categoria %>" class="product_img"> 
+                <!-- <a href="/detalleproducto.html"> -->
+                <a href="/Productos/<%= producto.id %> ">
+                  <img src="../img/<%= producto.categoria %>/<%= producto.img %>" alt="<%= producto.categoria %>" class="product_img"> 
+                </a>
                 <div class="main-article">
                     <i class="fa-solid fa-cart-plus"></i>
                     <p class="price">$<%= producto.precio %></p>
