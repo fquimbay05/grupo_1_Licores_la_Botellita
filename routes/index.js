@@ -16,10 +16,14 @@ router.get('/ron', productosController.ron);
 router.get('/vinos', productosController.vino);
 router.get('/whisky', productosController.whisky);
 router.get('/productos/:idProducto', productosController.detalle);
-
 router.get('/tequila', productosController.tequila);
 router.get('/coctel', productosController.coctel);
 
+router.get('/edit/:id', productosController.edit); 
+
 router.get('/recetas/:idReceta', mainController.edit);
+
+/*** DELETE ONE PRODUCT***/ 
+router.delete('/delete/:id', productosController.destroy); 
 
 module.exports = router;

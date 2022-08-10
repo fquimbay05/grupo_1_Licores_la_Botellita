@@ -18,7 +18,9 @@
     <header>
         <%- include('partials/header'); %>
     </header> 
- 
+
+    <div include-html="header.html"></div>
+    
     <main class="container2">
 
         <!-- Left Column / Headphones Image -->
@@ -56,12 +58,6 @@
             <span>$ <%= producto.precio %></span>
             <a href="#" class="cart-btn">Agregar al carrito</a>
           </div>
-
-          <a href="/productos/edit/<%= producto.id %>" class="action-button edit">EDITAR PRODUCTO</a>
-          <form action="/productos/delete/<%= producto.id %>?_method=DELETE" method="POST" style="display: inline-flex">
-            <button type="submit" class="action-button delete">ELIMINAR</button>
-          </form>
-
         </div>
       </main>
    
