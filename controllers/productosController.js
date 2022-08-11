@@ -91,7 +91,7 @@ const listaProductos = [
     id: 9,
     nombre: 'Buchanans',
     descripcion: 'Whisky Buchanans Master Blended',
-    precio: '158.200',
+    precio: 158.200,
     descuento: '10',
     categoria: 'whisky',
     img: 'buchanansmaster.png',
