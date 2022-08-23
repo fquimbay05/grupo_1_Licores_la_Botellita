@@ -14,10 +14,11 @@ app.set('view engine', 'ejs');
 // Rutas
 const rutasProductos = require('./routes/product.js');
 const rutasIndex = require('./routes/index');
-const rutasRecetas = require('./routes/recetas.js');
+const rutasUsuarios = require('./routes/users.js');
 
 app.use('/', rutasIndex);
 app.use('/productos',rutasProductos);
+app.use('/registro',rutasUsuarios);
 
 // app.use('/login',rutasIndex);
 // app.use('/registro',rutasIndex);

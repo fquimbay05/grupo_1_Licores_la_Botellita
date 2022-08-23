@@ -11,7 +11,7 @@
     </header> 
 
     <div class="login">
-        <form action="/registro" method="POST" enctype="multipart/form-data">
+        <form action="#" method=post>
 
             <section id="services">
 
@@ -22,45 +22,40 @@
 
             <h1>Crear nueva cuenta</h1><br>
 
-            <input type="text" id="nombre" name="nombre" maxlength="50" required><br>
+            <input type="text" name="nombres" maxlength="30" required><br>
             <label for="nombres">
                 <h3>Nombres *</h3>
             </label><br>
 
-            <input type="text" id="apellido"  name="apellido" maxlength="50" required><br>
+            <input type="text" name="apellidos" maxlength="30" required><br>
             <label for="apellidos">
                 <h3>Apellidos *</h3>
             </label><br>
 
-            <input type="email"  id="correo" name="correo" maxlength="30" required><br>
+            <input type="email" name="correo" maxlength="30" required><br>
             <label for="correo">
                 <h3>Correo Electronico *</h3>
             </label><br>
-            <input type="password"  id="password" name="password" maxlength="20" required ><br>
-            <label for="password">
-                <h3>Password *</h3>
-            </label><br>
-            <!-- <input type="date" name="fecha_nac" maxlength="30" required><br>
+
+            <input type="date" name="fecha_nac" maxlength="30" required><br>
             <label for="fecha_nac">
                 <h3>Fecha Nacimiento *</h3>
-            </label><br> -->
+            </label><br>
 
-            <input type="text" id="telefono" name="telefono" maxlength="30"><br>
-            <label for="telefono">
+            <input type="text" name="celular" maxlength="30"><br>
+            <label for="celular">
                 <h3>Celular</h3>
             </label><br>
 
-            <input type="text" id="ciudad" name="ciudad" maxlength="30"><br>
-            <label for="ciudad">
-                <h3>Ciudad</h3>
+            <input type="text" name="usuario" maxlength="30" required><br>
+            <label for="usuario">
+                <h3>Nombre Usuario *</h3>
             </label><br>
 
-            <input type="text" id="categoria" name="categoria" maxlength="30" value="false" hidden><br>
-
-            <div class="col-12">
-                <label for="img" class="form-label"> <h3>Foto Perfil: </h3></label>
-                <input type="file" name="img" id="img">
-            </div>
+            <input type="password" name="password" maxlength="20" required><br>
+            <label for="password">
+                <h3>Password *</h3>
+            </label><br>
             
             <form>
             <input type="checkbox" id="aceptar" name="aceptar">
@@ -69,7 +64,7 @@
           
 
           <input type="reset" value="Restaurar"  class="cart-btn">
-          <button type="submit"  class="cart-btn">Finalizar registro</button><br><br>
+            <button type="button"  class="cart-btn">Finalizar registro</button><br><br>
             <!-- <button type="button" onclick="alert('Usuario registrado exitosamente')">Finalizar registro</button><br><br> -->
             
             <!-- Autenticacion con google -->
