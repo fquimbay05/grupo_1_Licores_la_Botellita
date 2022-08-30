@@ -5,6 +5,9 @@ const path = require('path');
 
 const usuariosController = require('../controllers/usuariosController');
 
+const guestMiddleware = require('../src/middlewares/guestMiddleware');
+const authMiddleware = require('../src/middlewares/authMiddleware');
+
 // ************ Multer ************ 
 var storage = multer.diskStorage({
   destination:function(req,file,cb){

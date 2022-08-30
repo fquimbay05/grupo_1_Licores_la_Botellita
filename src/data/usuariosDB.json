@@ -117,7 +117,7 @@
   "password": "12345",
   "telefono": "3127570743",
   "ciudad": "Envigado",
-  "categoria": "true",  
+  "categoria": "true",
   "img": "img-1660581820709.jpg"
  },
  {
@@ -128,7 +128,7 @@
   "password": "12345",
   "telefono": "3127570700",
   "ciudad": "Envigado",
-  "categoria": "true",  
+  "categoria": "true",
   "img": "default-foto.png"
  },
  {
@@ -140,6 +140,18 @@
   "telefono": "3127570799",
   "ciudad": "Envigado",
   "categoria": "false",
+  "img": "default-foto.png"
+ },
+ {
+  "id": 14,
+  "nombre": "Ofelia Maria",
+  "apellido": "Monsalve",
+  "correo": "bosorio@summa-sci.com",
+  "password": "1234",
+  "telefono": "3127570799",
+  "ciudad": "Envigado",
+  "categoria": "false",
+  "aceptar": "on",
   "img": "default-foto.png"
  }
 ]
