@@ -153,5 +153,17 @@
   "categoria": "false",
   "aceptar": "on",
   "img": "default-foto.png"
+ },
+ {
+  "id": 15,
+  "nombre": "Anne",
+  "apellido": "Hathaway",
+  "correo": "aHathaway@outlook.com",
+  "password": "1234",
+  "telefono": "3127570700",
+  "ciudad": "Nueva York",
+  "categoria": "false",
+  "aceptar": "on",
+  "img": "img-1661899167226.png"
  }
 ]
