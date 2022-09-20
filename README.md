@@ -8,7 +8,6 @@ Los productos que ofrecemos van dirigidos al público en general con restriccion
  Vinos, Whisky, Tequila, Ron, malta, Cerveza y demás productos para todos los gustos.
 
 ### Integrantes:
-- Gladis Jaramillo Ospina - Ingeniera de sistemas 
 - Bibiana Osorio  - Ingeniera de sistema - especialista en proyectos
 - Gustavo Adolfo Wehdeking  - Ingeniero de sistemas 
 - Fabio Andrés Quimbay  - Ingeniero de sistemas
